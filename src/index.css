@@ -11,21 +11,24 @@
   --font-hero-animation-text-web: normal 500 340px/1.25 "Kanit";
   --font-hero-animation-text-tablet: normal 500 280px/1.25 "Kanit";
   --font-hero-animation-text-mobile: normal 500 120px/1.25 "Kanit";
+  --font-join-button-web-tablet: normal 500 16px/1.5 "Roboto Mono";
+  --font-join-button-mobile: normal 500 14px/1.7 "Roboto Mono";
 
-  --white: #fff;
-  --black: #000;
-  --accent-blue: #09237E;
-  --dark-grey: #2F2F2F;
-  --light-grey: #B3B3B3;
-  --background: #060412;
-  --warning-rose: #EB3795;
-
+  --color-white: #fff;
+  --color-black: #000;
+  --color-accent-blue: #09237E;
+  --color-dark-grey: #2F2F2F;
+  --color-light-grey: #B3B3B3;
+  --color-background: #060412;
+  --color-warning-rose: #EB3795;
+  --color-button: #272A2E;
 }
 
 
 
 body {
-  margin: 0 auto;
+  background-color: var(--color-background);
+  color: var(--color-white);
   font-family: 'Roboto Mono', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
