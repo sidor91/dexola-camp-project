@@ -22,16 +22,25 @@
   --color-background: #060412;
   --color-warning-rose: #EB3795;
   --color-button: #272A2E;
+
+  --width-mobile: 375px;
+  --width-tablet: 744px;
+  --width-web: 1440px;
 }
 
 
 
 body {
+  min-width: 100vw;
+  height: auto;
+  margin: 0;
+  padding: 0;
   background-color: var(--color-background);
   color: var(--color-white);
   font-family: 'Roboto Mono', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 a,
 p,
