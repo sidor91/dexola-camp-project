@@ -11,7 +11,6 @@ export const StyledButtonLink = styled.a`
 	justify-content: center;
 
 	font: var(--font-button-link-mobile);
-	letter-spacing: 0.28px;
 
 	@media ${media.minTablet} {
 		padding: 12px 0;

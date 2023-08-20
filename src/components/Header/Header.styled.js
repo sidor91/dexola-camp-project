@@ -9,6 +9,10 @@ export const StyledHeader = styled.header`
 	margin-left: auto;
 	margin-right: auto;
 	box-sizing: border-box;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+	background-color: var(--color-background);
 
 	@media ${media.minTablet} {
 		width: var(--width-tablet);

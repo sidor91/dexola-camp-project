@@ -28,7 +28,6 @@ export const ImagesContainer = styled.div`
 	margin-left: auto;
 	margin-right: auto;
 
-
 	@media ${media.minDesktop} {
 		width: 466px;
 		margin-right: unset;
@@ -48,13 +47,11 @@ export const StyledImage = styled.div`
 	}
 `;
 
-
 export const StyledMarquee = styled(Marquee)`
 	position: absolute;
 	top: 340px;
-    left: 0;
-    overflow: hidden;
-    
+	left: 0;
+	overflow: hidden;
 
 	@media ${media.minTablet} {
 		top: 296px;
@@ -70,7 +67,6 @@ export const MarqueeText = styled.p`
 	text-transform: uppercase;
 	margin-right: 375px;
 
-
 	@media ${media.minTablet} {
 		font: var(--font-hero-animation-text-tablet);
 		margin-right: 744px;
@@ -84,7 +80,7 @@ export const MarqueeText = styled.p`
 
 export const StyledParagraph = styled.p`
 	font: var(--font-body-mobile);
-	letter-spacing: -0.28px;
+
 	display: block;
 	width: 361px;
 	margin-left: auto;
@@ -93,18 +89,17 @@ export const StyledParagraph = styled.p`
 
 	@media ${media.minTablet} {
 		font: var(--font-body-tablet);
-		letter-spacing: -0.32px;
+
 		width: 696px;
 		margin-top: 306px;
 	}
 
 	@media ${media.minDesktop} {
 		font: var(--font-body-web);
-		letter-spacing: -0.36px;
+
 		width: 640px;
 		margin-right: unset;
 		margin-left: 24px;
 		margin-top: 159px;
 	}
 `;
-
