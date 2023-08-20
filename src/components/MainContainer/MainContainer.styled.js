@@ -3,6 +3,7 @@ import { media } from "../../utils/mediaRules";
 
 export const StyledMainContainer = styled.main`
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 
 	width: var(--width-mobile);

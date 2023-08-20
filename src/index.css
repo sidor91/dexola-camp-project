@@ -1,47 +1,43 @@
 :root {
-  --font-title-web: normal 400 140px/1 'Kanit'; 
-  --font-title-tablet: normal 400 112px/1 'Kanit';
-  --font-title-mobile: normal 400 48px/1 'Kanit';
-  --font-subtitle-web: normal 500 24px/1.4 'Kanit';
-  --font-subtitle-tablet: normal 500 20px/1.4 'Kanit';
-  --font-subtitle-mobile: normal 500 18px/1.4 'Kanit';
-  --font-body-web: normal 400 18px/1 'Roboto Mono';
-  --font-body-tablet: normal 400 16px/1 'Roboto Mono';
-  --font-body-mobile: normal 400 14px/1 'Roboto Mono';
-  --font-hero-animation-text-web: normal 500 340px/1.25 "Kanit";
-  --font-hero-animation-text-tablet: normal 500 280px/1.25 "Kanit";
-  --font-hero-animation-text-mobile: normal 500 120px/1.25 "Kanit";
-  --font-join-button-web-tablet: normal 500 16px/1.5 "Roboto Mono";
-  --font-join-button-mobile: normal 500 14px/1.7 "Roboto Mono";
+	--font-title-web: normal 400 140px/1 "Kanit";
+	--font-title-tablet: normal 400 112px/1 "Kanit";
+	--font-title-mobile: normal 400 48px/1 "Kanit";
+	--font-subtitle-web: normal 500 24px/1.4 "Kanit";
+	--font-subtitle-tablet: normal 500 20px/1.4 "Kanit";
+	--font-subtitle-mobile: normal 500 18px/1.4 "Kanit";
+	--font-body-web: normal 400 18px/1 "Roboto Mono";
+	--font-body-tablet: normal 400 16px/1 "Roboto Mono";
+	--font-body-mobile: normal 400 14px/1 "Roboto Mono";
+	--font-hero-animation-text-web: normal 500 340px/1.25 "Kanit";
+	--font-hero-animation-text-tablet: normal 500 280px/1.25 "Kanit";
+	--font-hero-animation-text-mobile: normal 500 120px/1.25 "Kanit";
+	--font-button-link-web-tablet: normal 500 16px/1.5 "Roboto Mono";
+	--font-button-link-mobile: normal 500 14px/1.7 "Roboto Mono";
 
-  --color-white: #fff;
-  --color-black: #000;
-  --color-accent-blue: #09237E;
-  --color-dark-grey: #2F2F2F;
-  --color-light-grey: #B3B3B3;
-  --color-background: #060412;
-  --color-warning-rose: #EB3795;
-  --color-button: #272A2E;
+	--color-white: #fff;
+	--color-black: #000;
+	--color-accent-blue: #09237e;
+	--color-dark-grey: #2f2f2f;
+	--color-light-grey: #b3b3b3;
+	--color-background: #060412;
+	--color-warning-rose: #eb3795;
+	--color-button: #272a2e;
 
-  --width-mobile: 375px;
-  --width-tablet: 744px;
-  --width-web: 1440px;
+	--width-mobile: 375px;
+	--width-tablet: 744px;
+	--width-web: 1440px;
 }
 
-
-
 body {
-  min-width: 100vw;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  background-color: var(--color-background);
-  color: var(--color-white);
-  font-family: 'Roboto Mono', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  
+	min-width: 100vw;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	background-color: var(--color-background);
+	color: var(--color-white);
+	font-family: "Roboto Mono", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 a,
 p,
@@ -52,24 +48,26 @@ h4,
 h5,
 h6,
 ul,
+li,
 img,
 ol {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 ul,
 ol,
 li {
-  list-style: none;
+	list-style: none;
 }
 
 img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+	display: block;
+	max-width: 100%;
+	height: auto;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
 }

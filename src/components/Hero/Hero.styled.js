@@ -4,12 +4,18 @@ import Marquee from "react-fast-marquee";
 
 export const StyledHero = styled.section`
 	padding-top: 9px;
+	padding-bottom: 90px;
 	display: flex;
 	flex-direction: column;
-    width: 100%;
+	width: 100%;
+
+	@media ${media.minTablet} {
+		padding-bottom: 134px;
+	}
 
 	@media ${media.minDesktop} {
 		padding-top: 0;
+		padding-bottom: 469px;
 		justify-content: space-between;
 		flex-direction: row-reverse;
 	}
@@ -41,6 +47,7 @@ export const StyledImage = styled.div`
 		background-position: unset;
 	}
 `;
+
 
 export const StyledMarquee = styled(Marquee)`
 	position: absolute;

@@ -1,15 +1,16 @@
-import property1defaultPic from "./Property 1=Default-min.png";
-import property1defaultPic2x from "./Property 1=Default2x-min.png";
-import property1variant2Pic from "./Property 1=Variant2-min.png";
-import property1variant2Pic2x from "./Property 1=Variant22x-min.png";
-import property1variant3Pic from "./Property 1=Variant3-min.png";
-import property1variant3Pic2x from "./Property 1=Variant32x-min.png";
-import property1variant4Pic from "./Property 1=Variant4-min.png";
-import property1variant4Pic2x from "./Property 1=Variant42x-min.png";
-import property1variant5Pic from "./Property 1=Variant5-min.png";
-import property1variant5Pic2x from "./Property 1=Variant52x-min.png";
+import property1defaultPic from "./Pic1.jpg";
+import property1defaultPic2x from "./Pic1_2x.jpg";
+import property1variant2Pic from "./Pic2.jpg";
+import property1variant2Pic2x from "./Pic2_2x.jpg";
+import property1variant3Pic from "./Pic3.jpg";
+import property1variant3Pic2x from "./Pic3_2x.jpg";
+import property1variant4Pic from "./Pic4.jpg";
+import property1variant4Pic2x from "./Pic4_2x.jpg";
+import property1variant5Pic from "./Pic5.jpg";
+import property1variant5Pic2x from "./Pic5_2x.jpg";
 
-export const heroProperty1 = [
+
+ const heroProperty1 = [
 	property1defaultPic,
 	property1variant2Pic,
 	property1variant3Pic,
@@ -17,10 +18,22 @@ export const heroProperty1 = [
 	property1variant5Pic,
 ];
 
-export const heroProperty1_2x = [
+ const heroProperty1_2x = [
 	property1defaultPic2x,
 	property1variant2Pic2x,
 	property1variant3Pic2x,
 	property1variant4Pic2x,
 	property1variant5Pic2x,
 ];
+
+let images;
+
+const { devicePixelRatio } = window;
+
+if (devicePixelRatio === 1) {
+	images = heroProperty1;
+} else {
+	images = heroProperty1_2x;
+}
+
+export default images;
