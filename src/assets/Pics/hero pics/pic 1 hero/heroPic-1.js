@@ -9,15 +9,18 @@ import property1variant4Pic2x from "./Property 1=Variant42x-min.png";
 import property1variant5Pic from "./Property 1=Variant5-min.png";
 import property1variant5Pic2x from "./Property 1=Variant52x-min.png";
 
-export const heroProperty1 = {
-	default: property1defaultPic,
-	default_2x: property1defaultPic2x,
-	variant2: property1variant2Pic,
-	variant2_2x: property1variant2Pic2x,
-	variant3: property1variant3Pic,
-	variant3_2x: property1variant3Pic2x,
-	variant4: property1variant4Pic,
-	variant4_2x: property1variant4Pic2x,
-	variant5: property1variant5Pic,
-	variant5_2x: property1variant5Pic2x,
-};
+export const heroProperty1 = [
+	property1defaultPic,
+	property1variant2Pic,
+	property1variant3Pic,
+	property1variant4Pic,
+	property1variant5Pic,
+];
+
+export const heroProperty1_2x = [
+	property1defaultPic2x,
+	property1variant2Pic2x,
+	property1variant3Pic2x,
+	property1variant4Pic2x,
+	property1variant5Pic2x,
+];

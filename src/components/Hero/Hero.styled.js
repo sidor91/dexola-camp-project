@@ -2,28 +2,14 @@ import styled from "styled-components";
 import { media } from "../../utils/mediaRules";
 import Marquee from "react-fast-marquee";
 
-export const StyledHero = styled.div`
-	/* width: var(--width-mobile); */
+export const StyledHero = styled.section`
 	padding-top: 9px;
-	/* padding-left: 7px;
-	padding-right: 7px; */
 	display: flex;
 	flex-direction: column;
-	/* justify-content: center; */
     width: 100%;
-	/* position: relative; */
-
-	/* @media ${media.minTablet} {
-		width: var(--width-tablet);
-		padding-left: 24px;
-		padding-right: 24px;
-	} */
 
 	@media ${media.minDesktop} {
-		/* width: var(--width-web); */
 		padding-top: 0;
-		/* padding-left: 120px; */
-		/* padding-right: 120px; */
 		justify-content: space-between;
 		flex-direction: row-reverse;
 	}
@@ -36,9 +22,6 @@ export const ImagesContainer = styled.div`
 	margin-left: auto;
 	margin-right: auto;
 
-	@media ${media.minTablet} {
-		/* width: 696px; */
-	}
 
 	@media ${media.minDesktop} {
 		width: 466px;
@@ -46,10 +29,17 @@ export const ImagesContainer = styled.div`
 	}
 `;
 
-export const StyledImage = styled.img`
+export const StyledImage = styled.div`
 	width: 50%;
 	height: 100%;
 	border: 1px solid var(--color-accent-blue);
+	background-size: cover;
+	background-position: center;
+	transition: background-image 2s ease;
+
+	@media ${media.minTablet} {
+		background-position: unset;
+	}
 `;
 
 export const StyledMarquee = styled(Marquee)`

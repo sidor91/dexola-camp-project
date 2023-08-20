@@ -2,12 +2,8 @@ import styled from "styled-components";
 import { media } from "../../utils/mediaRules";
 
 export const StyledHeader = styled.header`
-
-`;
-
-export const HeaderContainer = styled.div`
-	width: 345px;
-	padding: 4px 15px;
+	width: var(--width-mobile);
+	padding: 4px 7px 4px 15px;
 	display: flex;
 	justify-content: space-between;
 	margin-left: auto;
@@ -15,11 +11,14 @@ export const HeaderContainer = styled.div`
 	box-sizing: border-box;
 
 	@media ${media.minTablet} {
-		width: 744px;
+		width: var(--width-tablet);
 		padding: 15px 32px;
 	}
 
 	@media ${media.minDesktop} {
-		width: 1200px;
+		width: var(--width-web);
+		padding-left: 120px;
+		padding-right: 120px;
 	}
 `;
+
