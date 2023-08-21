@@ -8,6 +8,7 @@ export const StyledHero = styled.section`
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+	box-sizing: border-box;
 
 	@media ${media.minTablet} {
 		padding-bottom: 134px;

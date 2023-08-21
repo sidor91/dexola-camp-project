@@ -3,7 +3,10 @@ import { media } from "../../utils/mediaRules";
 
 export const StyledHeader = styled.header`
 	width: var(--width-mobile);
-	padding: 4px 7px 4px 15px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 15px;
+	padding-right: 15px;
 	display: flex;
 	justify-content: space-between;
 	margin-left: auto;
@@ -13,6 +16,7 @@ export const StyledHeader = styled.header`
 	top: 0;
 	z-index: 999;
 	background-color: var(--color-background);
+	box-sizing: border-box;
 
 	@media ${media.minTablet} {
 		width: var(--width-tablet);
