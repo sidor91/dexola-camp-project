@@ -3,10 +3,7 @@ import { media } from "../../utils/mediaRules";
 
 export const StyledHeader = styled.header`
 	width: var(--width-mobile);
-	padding-top: 4px;
-	padding-bottom: 4px;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding: 4px 15px;
 	display: flex;
 	justify-content: space-between;
 	margin-left: auto;

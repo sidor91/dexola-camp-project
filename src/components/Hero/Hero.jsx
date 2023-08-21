@@ -35,26 +35,26 @@ export const Hero = () => {
 
 	return (
 		<StyledHero>
-			<ImagesContainer>
-				<StyledImage
-					style={{
-						backgroundImage: `url("${images_1[currentImage_1Index]}")`,
-					}}
-				/>
-				<StyledImage
-					style={{
-						backgroundImage: `url("${images_2[currentImage_1Index]}")`,
-					}}
-				/>
-			</ImagesContainer>
-			<StyledMarquee speed={150}>
-				<MarqueeText>dexola camp</MarqueeText>
-			</StyledMarquee>
-			<StyledParagraph>
-				Prepare to be transported beyond the boundaries of traditional gaming
-				with the StarRunner Ecosystem – the beating heart that drives the
-				adrenaline-charged galactic P2E odyssey of 'StarRunner.'
-			</StyledParagraph>
+				<ImagesContainer>
+					<StyledImage
+						style={{
+							backgroundImage: `url("${images_1[currentImage_1Index]}")`,
+						}}
+					/>
+					<StyledImage
+						style={{
+							backgroundImage: `url("${images_2[currentImage_1Index]}")`,
+						}}
+					/>
+				</ImagesContainer>
+				<StyledMarquee speed={150}>
+					<MarqueeText>dexola camp</MarqueeText>
+				</StyledMarquee>
+				<StyledParagraph>
+					Prepare to be transported beyond the boundaries of traditional gaming
+					with the StarRunner Ecosystem – the beating heart that drives the
+					adrenaline-charged galactic P2E odyssey of 'StarRunner.'
+				</StyledParagraph>
 		</StyledHero>
 	);
 };

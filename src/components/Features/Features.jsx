@@ -16,8 +16,8 @@ export const Features = () => {
 					living, evolving entity that adapts to the desires and creativity of
 					its players.
 				</Paragraph>
-            </InformationContainer>
-            <FeaturesCardSet/>
+			</InformationContainer>
+			<FeaturesCardSet />
 		</>
 	);
 };

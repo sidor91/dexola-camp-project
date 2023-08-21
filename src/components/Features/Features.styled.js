@@ -5,6 +5,7 @@ import { H3heading, StyledParagraph } from "../SharedElements.styled";
 
 export const InformationContainer = styled.div`
 	margin-bottom: 24px;
+
 	@media ${media.minTablet} {
 		margin-bottom: 40px;
 		display: flex;
@@ -12,22 +13,21 @@ export const InformationContainer = styled.div`
 	}
 
 	@media ${media.minDesktop} {
-		padding-left: 187px;
 		margin-bottom: 90px;
+		justify-content: unset;
 	}
 `;
 
 export const Heading = styled(H3heading)`
-	display: flex;
 	margin-bottom: 12px;
 
 	@media ${media.minTablet} {
-		flex-direction: column;
 		margin-bottom: auto;
 	}
 
 	@media ${media.minDesktop} {
-		flex-direction: row;
+		margin-left: 187px;
+		margin-right: 24px;
 	}
 `;
 

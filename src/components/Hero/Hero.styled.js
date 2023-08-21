@@ -3,31 +3,34 @@ import { media } from "../../utils/mediaRules";
 import Marquee from "react-fast-marquee";
 
 export const StyledHero = styled.section`
-	padding-top: 9px;
-	padding-bottom: 90px;
+	width: 100%;
+	padding: 9px 15px 90px;
+	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
-	width: 100%;
-	box-sizing: border-box;
 
 	@media ${media.minTablet} {
 		padding-bottom: 134px;
+		padding-left: 24px;
+		padding-right: 24px;
 	}
 
 	@media ${media.minDesktop} {
-		padding-top: 0;
-		padding-bottom: 469px;
+		padding: 0 120px;
+		margin-bottom: 469px;
 		justify-content: space-between;
 		flex-direction: row-reverse;
+		border-top: 1px solid var(--color-accent-blue);
+		border-bottom: 1px solid var(--color-accent-blue);
 	}
 `;
+
+
 
 export const ImagesContainer = styled.div`
 	display: flex;
 	width: 100%;
 	height: 311px;
-	margin-left: auto;
-	margin-right: auto;
 
 	@media ${media.minDesktop} {
 		width: 466px;
@@ -90,7 +93,6 @@ export const StyledParagraph = styled.p`
 
 	@media ${media.minTablet} {
 		font: var(--font-body-tablet);
-
 		width: 696px;
 		margin-top: 306px;
 	}
