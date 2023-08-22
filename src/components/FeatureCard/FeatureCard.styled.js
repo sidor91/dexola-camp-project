@@ -16,6 +16,7 @@ export const Card = styled.li`
 export const Image = styled.img`
 	width: 100%;
 	height: 236px;
+	object-fit: cover;
 
 	@media ${media.minTablet} {
 		height: 240px;

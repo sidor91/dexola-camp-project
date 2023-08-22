@@ -5,14 +5,17 @@ import { H3heading, StyledParagraph } from "../SharedElements.styled";
 
 export const InformationContainer = styled.div`
 	margin-bottom: 24px;
+	margin-top: 32px;
 
 	@media ${media.minTablet} {
 		margin-bottom: 40px;
+		margin-top: 56px;
 		display: flex;
 		justify-content: space-between;
 	}
 
 	@media ${media.minDesktop} {
+		margin-top: 90px;
 		margin-bottom: 90px;
 		justify-content: unset;
 	}

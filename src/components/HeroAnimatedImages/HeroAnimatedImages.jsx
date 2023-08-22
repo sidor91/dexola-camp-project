@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ImagesContainer, StyledImage } from "./HeroAnimatedImages.styled";
-import images_1 from "../../assets/Pics/hero pics/pic 1 hero/heroPic-1";
-import images_2 from "../../assets/Pics/hero pics/pic 2 hero/heroPic-2";
+import images_1 from "../../assets/Pics/heroPics/pic1Hero/heroPic-1";
+import images_2 from "../../assets/Pics/heroPics/pic2Hero/heroPic-2";
 
 export const HeroAnimatedImages = () => {
 	const [currentImage_1Index, setCurrentImage_1Index] = useState(0);

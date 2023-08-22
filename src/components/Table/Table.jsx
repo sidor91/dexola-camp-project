@@ -5,12 +5,16 @@ import {
 	StyledTH,
 	StyledTbody,
 	StyledTD,
-	PlayerContainer,
-	SecondaryInformationContainer,
+	DynamicTD,
+	StyledImage,
+	TDText,
+	DynamicTDText,
+	ImageContainer,
 } from "./Table.styled";
 import data from '../../topNFTdata.json';
 import useWindowDimensions from "../../utils/hooks/useWindowDimensions";
 import { useState, useEffect } from 'react';
+import images from '../../assets/Pics/TopNFTPics/topNFTpics'
 
 export const Table = () => {
     const dimensions = useWindowDimensions();
@@ -33,40 +37,32 @@ export const Table = () => {
 					</StyledTR>
 				</StyledThead>
 				<StyledTbody>
-					{data.palyers.map((elem, index) => (
-						// <PlayerContainer key={index}>
+					{data.palyers.map(
+						({ nftName, price, rarityLevel, totalGames, gamesWon }, index) => (
 							<StyledTR key={index}>
 								{isMobile ? (
-									<StyledTD label={elem.nftName}>
-										<span style={{ marginLeft: "auto", paddingBottom: 12 }}>
-											{elem.price}
-										</span>
-									</StyledTD>
+									<DynamicTD label={`${index + 1}. ${nftName}`}>
+										<DynamicTDText>{price} ETH</DynamicTDText>
+									</DynamicTD>
 								) : (
-									<StyledTD label="NFT Name">{elem.nftName}</StyledTD>
+									<StyledTD label="NFT Name">{nftName}</StyledTD>
 								)}
-
-								<SecondaryInformationContainer>
-									<StyledTD label="Rarity:">
-										<span style={{ marginLeft: "auto" }}>
-											{elem.rarityLevel}
-										</span>
-									</StyledTD>
-									<StyledTD label="Total games:">
-										<span style={{ marginLeft: "auto" }}>
-											{elem.totalGames}
-										</span>
-									</StyledTD>
-									<StyledTD label="Games Won:">
-										<span style={{ marginLeft: "auto" }}>{elem.gamesWon}</span>
-									</StyledTD>
-									{!isMobile && (
-										<StyledTD label="Price (ETH)">{elem.price}</StyledTD>
-									)}
-								</SecondaryInformationContainer>
+								<ImageContainer>
+									<StyledImage src={images[index]} />
+								</ImageContainer>
+								<StyledTD label="Rarity:">
+									<TDText>{rarityLevel}</TDText>
+								</StyledTD>
+								<StyledTD label="Total games:">
+									<TDText>{totalGames}</TDText>
+								</StyledTD>
+								<StyledTD label="Games Won:">
+									<TDText>{gamesWon}</TDText>
+								</StyledTD>
+								{!isMobile && <StyledTD label="Price (ETH)">{price}</StyledTD>}
 							</StyledTR>
-						// </PlayerContainer>
-					))}
+						)
+					)}
 				</StyledTbody>
 			</StyledTable>
 		);
