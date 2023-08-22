@@ -1,22 +1,34 @@
 import {
-	StyledTable,
-	StyledThead,
-	StyledTR,
-	StyledTH,
-	StyledTbody,
-	StyledTD,
+	Table,
+	THead,
+	TR,
+	TH,
+	TD,
 	DynamicTD,
-	StyledImage,
+	Image,
 	TDText,
 	DynamicTDText,
-	ImageContainer,
+	ImageTD,
+	ImageTH,
+	HeadTR,
+	NFTNameText,
+	RarityLevelText,
+	THText,
+	NameTH,
+	RarityTh,
+	GamesTH,
+	WonTH,
+	PriceTH,
+	GamesText,
+WonText,
+PriceText,
 } from "./Table.styled";
 import data from '../../topNFTdata.json';
 import useWindowDimensions from "../../utils/hooks/useWindowDimensions";
 import { useState, useEffect } from 'react';
 import images from '../../assets/Pics/TopNFTPics/topNFTpics'
 
-export const Table = () => {
+export const NFTTable = () => {
     const dimensions = useWindowDimensions();
     const [isMobile, setIsMobile] = useState(dimensions < 744);
 
@@ -24,47 +36,67 @@ export const Table = () => {
         setIsMobile(dimensions < 744);
     },[dimensions])
 
-
     return (
-			<StyledTable>
-				<StyledThead>
-					<StyledTR>
-						<StyledTH>NFT Name</StyledTH>
-						<StyledTH>Rarity Level</StyledTH>
-						<StyledTH>Total games</StyledTH>
-						<StyledTH>Games Won</StyledTH>
-						<StyledTH>Price (ETH)</StyledTH>
-					</StyledTR>
-				</StyledThead>
-				<StyledTbody>
+			<Table>
+				{!isMobile && (
+					<THead>
+						<HeadTR>
+							<TH>
+								<ImageTH></ImageTH>
+							</TH>
+							<TH>
+								<NameTH>NFT Name</NameTH>
+							</TH>
+							<TH>
+								<RarityTh>Rarity Level</RarityTh>
+							</TH>
+							<TH>
+								<GamesTH>Total games</GamesTH>
+							</TH>
+							<TH>
+								<WonTH>Games Won</WonTH>
+							</TH>
+							<TH>
+								<PriceTH>Price (ETH)</PriceTH>
+							</TH>
+						</HeadTR>
+					</THead>
+				)}
+				<tbody>
 					{data.palyers.map(
 						({ nftName, price, rarityLevel, totalGames, gamesWon }, index) => (
-							<StyledTR key={index}>
+							<TR key={index}>
+								<ImageTD>
+									<Image src={images[index]} />
+								</ImageTD>
 								{isMobile ? (
 									<DynamicTD label={`${index + 1}. ${nftName}`}>
 										<DynamicTDText>{price} ETH</DynamicTDText>
 									</DynamicTD>
 								) : (
-									<StyledTD label="NFT Name">{nftName}</StyledTD>
+									<TD label="NFT Name">
+										<NFTNameText>{nftName}</NFTNameText>
+									</TD>
 								)}
-								<ImageContainer>
-									<StyledImage src={images[index]} />
-								</ImageContainer>
-								<StyledTD label="Rarity:">
-									<TDText>{rarityLevel}</TDText>
-								</StyledTD>
-								<StyledTD label="Total games:">
-									<TDText>{totalGames}</TDText>
-								</StyledTD>
-								<StyledTD label="Games Won:">
-									<TDText>{gamesWon}</TDText>
-								</StyledTD>
-								{!isMobile && <StyledTD label="Price (ETH)">{price}</StyledTD>}
-							</StyledTR>
+								<TD label="Rarity:">
+									<RarityLevelText>{rarityLevel}</RarityLevelText>
+								</TD>
+								<TD label="Total games:">
+									<GamesText>{totalGames}</GamesText>
+								</TD>
+								<TD label="Games Won:">
+									<WonText>{gamesWon}</WonText>
+								</TD>
+								{!isMobile && (
+									<TD label="Price (ETH)">
+										<PriceText>{price}</PriceText>
+									</TD>
+								)}
+							</TR>
 						)
 					)}
-				</StyledTbody>
-			</StyledTable>
+				</tbody>
+			</Table>
 		);
 }
 
