@@ -39,6 +39,7 @@ export const TH = styled.th`
 
 	@media ${media.minDesktop} {
 		padding: 12px 24px;
+		white-space: nowrap;
 	}
 `;
 
@@ -166,6 +167,6 @@ min-width: 185px;
 
 @media ${media.minDesktop} {
 	min-width: initial;
-	width: 400px;
+	width: 390px;
 }
 `
