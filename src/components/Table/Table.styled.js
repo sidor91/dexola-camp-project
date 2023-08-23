@@ -131,11 +131,10 @@ export const Title = styled(H3heading)`
 export const Text = styled(StyledParagraph)`
 	margin-left: auto;
 
-	
-
 	@media ${media.minTablet} {
 		margin-left: 0;
 		padding-bottom: 0;
+		color: var(--color-white);
 	}
 `;
 
