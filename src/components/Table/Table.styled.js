@@ -36,6 +36,10 @@ export const TH = styled.th`
 	&:last-child {
 		padding: 12px 24px;
 	}
+
+	@media ${media.minDesktop} {
+		padding: 12px 24px;
+	}
 `;
 
 export const Tbody = styled.tbody``;
@@ -98,6 +102,12 @@ export const TD = styled.td`
 		&:nth-child(2) {
 			white-space: nowrap;
 			position: initial;
+		}
+	}
+
+	@media ${media.minDesktop} {
+		&:not(:first-child) {
+			padding: 11px 24px;
 		}
 	}
 `;
