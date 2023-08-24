@@ -28,29 +28,29 @@ export const HeroAnimatedImages = () => {
 		<ImagesContainer>
 			<Container>
 				{images1.map((image, index) => (
-						<StyledImage
-							key={index}
-							src={image}
-							alt={`Image ${index + 1}`}
-							style={{
-								opacity: index === currentIndex ? 1 : 0,
-								transition: "opacity 2s ease-in-out",
-							}}
-						/>
-					))}
+					<StyledImage
+						key={index}
+						src={image}
+						alt={`Image ${index + 1}`}
+						style={{
+							opacity: index === currentIndex ? 1 : 0,
+							transition: "opacity 2s ease-in-out",
+						}}
+					/>
+				))}
 			</Container>
 			<Container>
 				{images2.map((image, index) => (
-						<StyledImage
-							key={index}
-							src={image}
-							alt={`Image ${index + 1}`}
-							style={{
-								opacity: index === currentIndex ? 1 : 0,
-								transition: "opacity 2s ease-in-out",
-							}}
-						/>
-					))}
+					<StyledImage
+						key={index}
+						src={image}
+						alt={`Image ${index + 1}`}
+						style={{
+							opacity: index === currentIndex ? 1 : 0,
+							transition: "opacity 2s ease-in-out",
+						}}
+					/>
+				))}
 			</Container>
 		</ImagesContainer>
 	);

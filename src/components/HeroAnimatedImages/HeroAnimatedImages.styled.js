@@ -4,15 +4,13 @@ import { media } from "../../utils/mediaRules";
 export const ImagesContainer = styled.div`
 	display: flex;
 	width: 100%;
-	height: 311px;
+	min-height: 311px;
 	margin-left: 15px;
 	margin-bottom: 16px;
 
 	@media ${media.minTablet} {
 		margin-left: 0;
-		width: 696px;
-		margin-left: auto;
-		margin-right: auto;
+		width: 100%;
 	}
 
 	@media ${media.minDesktop} {
@@ -22,10 +20,12 @@ export const ImagesContainer = styled.div`
 `;
 
 export const Container = styled.div`
-	width: 50%;
-	height: 100%;
+	flex: 1;
+	min-height: 311px;
+	box-sizing: border-box;
 	border: 1px solid var(--color-accent-blue);
 	position: relative;
+	padding-bottom: 50%; 
 `;
 
 export const StyledImage = styled.img`
@@ -35,7 +35,6 @@ export const StyledImage = styled.img`
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	object-position: center;
 `;
 
 

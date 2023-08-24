@@ -3,8 +3,8 @@ import { media } from "../../utils/mediaRules";
 import Marquee from "react-fast-marquee";
 
 export const StyledMarquee = styled(Marquee)`
-	overflow: hidden;
 	margin-bottom: 16px;
+	overflow: hidden;
 
 	@media ${media.minDesktop} {
 		position: absolute;
@@ -26,6 +26,6 @@ export const MarqueeText = styled.p`
 
 	@media ${media.minDesktop} {
 		font: var(--font-hero-animation-text-web);
-		margin-right: 1200px;
+		margin-right: 1440px;
 	}
 `;

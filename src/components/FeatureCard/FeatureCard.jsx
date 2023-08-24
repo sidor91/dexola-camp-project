@@ -22,7 +22,7 @@ export const FeatureCard = ({image, number, title, description}) => {
 					</CardDescriptionHeading>
 					<CardDescriptionParagraph>{description}</CardDescriptionParagraph>
 
-					<StyledButtonLink $icon={iconArrow} href="https://dexola.com/">
+					<StyledButtonLink $icon={iconArrow} href="https://dexola.com/" target="blanc">
 						<StyledIcon src={iconArrow} />
 						<span style={{ textTransform: "uppercase" }}>discover more</span>
 					</StyledButtonLink>

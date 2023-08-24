@@ -6,7 +6,7 @@ export const Header = () => {
 	return (
 		<StyledHeader>
 			<img src={Logo} />
-			<StyledButtonLink href="https://dexola.com/">
+			<StyledButtonLink href="https://dexola.com/" target="blanc">
 				<StyledIcon src={iconArrow} />
 				<span style={{ textTransform: "capitalize" }}>join now</span>
 			</StyledButtonLink>

@@ -6,6 +6,8 @@ export const Card = styled.li`
 	width: 100%;
 	border: 1px solid var(--color-accent-blue);
 	margin-bottom: 16px;
+	display: flex;
+	flex-direction: column;
 
 	@media ${media.minTablet} {
 		margin-bottom: 0;
@@ -15,7 +17,7 @@ export const Card = styled.li`
 
 export const Image = styled.img`
 	width: 100%;
-	height: 236px;
+	height: auto;
 	object-fit: cover;
 
 	@media ${media.minTablet} {
@@ -29,17 +31,16 @@ export const Image = styled.img`
 
 export const CardDescriptionContainer = styled.div`
 	padding: 16px 24px;
-	/* height: 100%; */
+	flex: 1;
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
 	box-sizing: border-box;
 
 	@media ${media.minTablet} {
-		/* gap: 0; */
+		gap: 0;
 		padding-left: 16px;
 		padding-right: 16px;
-		/* height: 298px; */
 	}
 
 	@media ${media.minDesktop} {
@@ -53,7 +54,7 @@ export const CardDescriptionHeading = styled(H3heading)`
 	display: flex;
 
 	@media ${media.minTablet} {
-		/* margin-bottom: 16px; */
+		margin-bottom: 16px;
 		flex-direction: column;
 	}
 
@@ -64,11 +65,10 @@ export const CardDescriptionHeading = styled(H3heading)`
 
 export const CardDescriptionParagraph = styled(Paragraph)`
 	width: 100%;
-	/* height: 100%; */
 	margin-bottom: 8px;
 
 	@media ${media.minTablet} {
-		margin-bottom: 0;
+		margin-bottom: 16px;
 	}
 `;
 
