@@ -1,8 +1,6 @@
 import {
 	Table,
-	Thead,
 	TH,
-	Tbody,
 	TR,
 	TD,
 	Image,
@@ -29,7 +27,7 @@ export const NFTTable = () => {
     return (
 			<Table>
 				{!isMobile && (
-					<Thead>
+					<thead>
 						<TR style={{ backgroundColor: "inherit" }}>
 							<TH></TH>
 							<TH>
@@ -48,9 +46,9 @@ export const NFTTable = () => {
 								<Title>Price (ETH)</Title>
 							</TH>
 						</TR>
-					</Thead>
+					</thead>
 				)}
-				<Tbody>
+				<tbody>
 					{data.palyers.map(
 						({ nftName, price, rarityLevel, totalGames, gamesWon }, index) => (
 							<TR key={index}>
@@ -85,7 +83,7 @@ export const NFTTable = () => {
 							</TR>
 						)
 					)}
-				</Tbody>
+				</tbody>
 			</Table>
 		);
 }

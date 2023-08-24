@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { media } from "../../utils/mediaRules";
-import { StyledParagraph, H3heading } from "../SharedElements.styled";
-
+import { Paragraph, H3heading } from "../SharedElements.styled";
 
 export const Table = styled.table`
 	width: 100%;
@@ -17,10 +16,6 @@ export const Table = styled.table`
 	@media ${media.minDesktop} {
 		margin-top: 90px;
 	}
-`;
-
-export const Thead = styled.thead`
-	
 `;
 
 export const TH = styled.th`
@@ -43,15 +38,12 @@ export const TH = styled.th`
 	}
 `;
 
-export const Tbody = styled.tbody``;
-
 export const TR = styled.tr`
 	padding-top: 16px;
 	padding-bottom: 16px;
 	display: block;
 	border-bottom: 1px solid var(--color-accent-blue);
 	position: relative;
-	
 
 	@media ${media.minTablet} {
 		display: table-row;
@@ -124,11 +116,8 @@ export const Image = styled.img`
 	}
 `;
 
-	
-export const Title = styled(H3heading)`
-
-`;
-export const Text = styled(StyledParagraph)`
+export const Title = styled(H3heading)``;
+export const Text = styled(Paragraph)`
 	margin-left: auto;
 
 	@media ${media.minTablet} {
@@ -139,15 +128,14 @@ export const Text = styled(StyledParagraph)`
 `;
 
 export const DynamicTD = styled(TD)`
- 	&::before {
- 		font: var(--font-subtitle-mobile);
- 		color: var(--color-white);
- 		font-size: 16px;
- 		margin-left: 0;
- 	}
- `;
+	&::before {
+		font: var(--font-subtitle-mobile);
+		color: var(--color-white);
+		font-size: 16px;
+		margin-left: 0;
+	}
+`;
 
- 
 export const DynamicTDText = styled(Text)`
 	font: var(--font-subtitle-mobile);
 	font-size: 16px;
@@ -156,16 +144,16 @@ export const DynamicTDText = styled(Text)`
 `;
 
 export const ImageTD = styled(TD)`
-&::before {
-	display: none;
-}
-`
+	&::before {
+		display: none;
+	}
+`;
 
 export const NFTNameText = styled(Text)`
-min-width: 185px;
+	min-width: 185px;
 
-@media ${media.minDesktop} {
-	min-width: initial;
-	width: 390px;
-}
-`
+	@media ${media.minDesktop} {
+		min-width: initial;
+		width: 390px;
+	}
+`;

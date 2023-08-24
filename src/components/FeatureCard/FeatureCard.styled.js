@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { media } from "../../utils/mediaRules";
-import { H3heading, StyledParagraph } from "../SharedElements.styled";
+import { H3heading, Paragraph, ButtonLink } from "../SharedElements.styled";
 
 export const Card = styled.li`
 	width: 100%;
@@ -29,16 +29,17 @@ export const Image = styled.img`
 
 export const CardDescriptionContainer = styled.div`
 	padding: 16px 24px;
+	/* height: 100%; */
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
 	box-sizing: border-box;
 
 	@media ${media.minTablet} {
-        gap:0;
+		/* gap: 0; */
 		padding-left: 16px;
 		padding-right: 16px;
-		height: 298px;
+		/* height: 298px; */
 	}
 
 	@media ${media.minDesktop} {
@@ -52,7 +53,7 @@ export const CardDescriptionHeading = styled(H3heading)`
 	display: flex;
 
 	@media ${media.minTablet} {
-        margin-bottom: 16px;
+		/* margin-bottom: 16px; */
 		flex-direction: column;
 	}
 
@@ -61,8 +62,9 @@ export const CardDescriptionHeading = styled(H3heading)`
 	}
 `;
 
-export const CardDescriptionParagraph = styled(StyledParagraph)`
+export const CardDescriptionParagraph = styled(Paragraph)`
 	width: 100%;
+	/* height: 100%; */
 	margin-bottom: 8px;
 
 	@media ${media.minTablet} {
@@ -81,3 +83,29 @@ export const CardNumber = styled.span`
 		margin-bottom: 0;
 	}
 `;
+
+export const StyledButtonLink = styled(ButtonLink)`
+	width: 297px;
+	margin-top: auto;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media ${media.minTablet} {
+		width: 189px;
+	}
+
+	@media ${media.minDesktop} {
+		width: 325px;
+	}
+`;
+
+export const StyledIcon = styled.img`
+	width: 24px;
+	height: 17px;
+	margin-right: 8px;
+	margin-top: auto;
+	margin-bottom: auto;
+`;
+

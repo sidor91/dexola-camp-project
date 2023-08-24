@@ -1,8 +1,12 @@
 import styled from "styled-components";
 import { media } from "../../utils/mediaRules";
+import { ButtonLink } from "../SharedElements.styled";
+
 
 export const StyledHeader = styled.header`
-	width: var(--width-mobile);
+	/* width: var(--width-mobile); */
+	min-width: var(--width-mobile);
+	max-width: var(--width-web);
 	padding: 4px 15px;
 	display: flex;
 	justify-content: space-between;
@@ -16,14 +20,32 @@ export const StyledHeader = styled.header`
 	box-sizing: border-box;
 
 	@media ${media.minTablet} {
-		width: var(--width-tablet);
+		/* width: var(--width-tablet); */
 		padding: 15px 32px;
 	}
 
 	@media ${media.minDesktop} {
-		width: var(--width-web);
+		/* width: var(--width-web); */
 		padding-left: 120px;
 		padding-right: 120px;
 	}
+`;
+
+export const StyledButtonLink = styled(ButtonLink)`
+	width: 136px;
+	padding: 10px 0;
+
+	@media ${media.minTablet} {
+		padding: 12px 0;
+		width: 235px;
+	}
+`;
+
+export const StyledIcon = styled.img`
+	width: 24px;
+	height: 17px;
+	margin-right: 8px;
+	margin-top: auto;
+	margin-bottom: auto;
 `;
 

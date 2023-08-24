@@ -1,15 +1,16 @@
 import styled from "styled-components";
 import { media } from "../../utils/mediaRules";
+import { Paragraph } from "../SharedElements.styled";
 
 export const StyledHero = styled.section`
 	width: 100%;
-	padding: 9px 15px 90px;
+	padding-top: 9px;
+	padding-bottom: 134px;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
 
 	@media ${media.minTablet} {
-		padding-bottom: 134px;
 		padding-left: 24px;
 		padding-right: 24px;
 	}
@@ -24,27 +25,17 @@ export const StyledHero = styled.section`
 	}
 `;
 
-export const StyledParagraph = styled.p`
-	font: var(--font-body-mobile);
-
+export const StyledParagraph = styled(Paragraph)`
+	margin-left: 15px;
 	display: block;
-	width: 361px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 179px;
+	width: 100%;
 
 	@media ${media.minTablet} {
-		font: var(--font-body-tablet);
-		width: 696px;
-		margin-top: 306px;
+		margin-left: 0;
 	}
 
 	@media ${media.minDesktop} {
-		font: var(--font-body-web);
-
 		width: 640px;
-		margin-right: unset;
-		margin-left: 24px;
-		margin-top: 159px;
+		margin: 159px 0 24px 0;
 	}
 `;

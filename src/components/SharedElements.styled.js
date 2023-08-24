@@ -14,12 +14,11 @@ export const H2heading = styled.h2`
 	}
 `;
 
-
 export const H3heading = styled.h3`
 	font: var(--font-subtitle-mobile);
-    color: var(--color-white);
-	
-    @media ${media.minTablet} {
+	color: var(--color-white);
+
+	@media ${media.minTablet} {
 		font: var(--font-subtitle-tablet);
 	}
 
@@ -28,8 +27,7 @@ export const H3heading = styled.h3`
 	}
 `;
 
-
-export const StyledParagraph = styled.p`
+export const Paragraph = styled.p`
 	font: var(--font-body-mobile);
 	color: var(--color-light-grey);
 
@@ -39,5 +37,19 @@ export const StyledParagraph = styled.p`
 
 	@media ${media.minDesktop} {
 		font: var(--font-body-web);
+	}
+`;
+
+export const ButtonLink = styled.a`
+	display: flex;
+	background-color: var(--color-button);
+	color: var(--color-white);
+	text-decoration: none;
+	justify-content: center;
+
+	font: var(--font-button-link-mobile);
+
+	@media ${media.minTablet} {
+		font: var(--font-button-link-web-tablet);
 	}
 `;

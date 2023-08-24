@@ -1,6 +1,7 @@
 import {
 	StyledSection,
 	StyledSectionHeader,
+	Container,
 } from "./Section.styled";
 
 export const Section = ({ children, sectionName, sectionNumber }) => {
@@ -10,7 +11,7 @@ export const Section = ({ children, sectionName, sectionNumber }) => {
 				<span>{sectionName}</span>
 				<span>{sectionNumber}</span>
 			</StyledSectionHeader>
-			{children}
+			<Container>{children}</Container>
 		</StyledSection>
 	);
 };

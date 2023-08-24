@@ -5,11 +5,13 @@ import {
 	CardDescriptionHeading,
 	CardDescriptionParagraph,
 	CardNumber,
+	StyledButtonLink,
+	StyledIcon,
 } from "./FeatureCard.styled";
-import { ButtonLink } from "../ButtonLink/ButtonLink";
+import iconArrow from "../../assets/Pics/icon_arrow.svg";
 
 
-export const FeatureCard = ({image, number, title, description, icon}) => {
+export const FeatureCard = ({image, number, title, description}) => {
     return (
 			<Card>
 				<Image src={image} />
@@ -18,22 +20,12 @@ export const FeatureCard = ({image, number, title, description, icon}) => {
 						<CardNumber>{number}</CardNumber>
 						<span>{title}</span>
 					</CardDescriptionHeading>
-					<CardDescriptionParagraph>
-						{description}
-					</CardDescriptionParagraph>
+					<CardDescriptionParagraph>{description}</CardDescriptionParagraph>
 
-					<ButtonLink
-						icon={icon}
-						href="https://dexola.com/"
-						title="discover more"
-						textStyle={{ textTransform: "uppercase" }}
-						buttonStyle={{
-							width: "100%",
-							marginTop: "auto",
-							paddingTop: 12,
-							paddingBottom: 12,
-						}}
-					/>
+					<StyledButtonLink $icon={iconArrow} href="https://dexola.com/">
+						<StyledIcon src={iconArrow} />
+						<span style={{ textTransform: "uppercase" }}>discover more</span>
+					</StyledButtonLink>
 				</CardDescriptionContainer>
 			</Card>
 		);

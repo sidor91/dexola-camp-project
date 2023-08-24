@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { media } from "../../utils/mediaRules";
-import { H3heading, StyledParagraph } from "../SharedElements.styled"; 
+import { H3heading, Paragraph } from "../SharedElements.styled"; 
 
 
 export const InformationContainer = styled.div`
@@ -34,7 +34,7 @@ export const Heading = styled(H3heading)`
 	}
 `;
 
-export const Paragraph = styled(StyledParagraph)`
+export const StyledParagraph = styled(Paragraph)`
 	display: block;
 	width: 100%;
 

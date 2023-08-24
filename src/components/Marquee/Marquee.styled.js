@@ -3,17 +3,14 @@ import { media } from "../../utils/mediaRules";
 import Marquee from "react-fast-marquee";
 
 export const StyledMarquee = styled(Marquee)`
-	position: absolute;
-	top: 340px;
-	left: 0;
 	overflow: hidden;
-
-	@media ${media.minTablet} {
-		top: 296px;
-	}
+	margin-bottom: 16px;
 
 	@media ${media.minDesktop} {
+		position: absolute;
+		left: 0;
 		top: 290px;
+		margin-bottom: 0;
 	}
 `;
 
