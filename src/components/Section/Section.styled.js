@@ -32,16 +32,18 @@ export const StyledSectionHeader = styled(H2heading)`
 	}
 `;
 
-export const Container = styled.div`
-	width: 100%;
-	padding: 14px 24px 76px;
-	box-sizing: border-box;
+// export const Container = styled.div`
+// 	width: 100%;
+// 	padding-left: 24px;
+// 	padding-right: 24px;
+// 	/* padding: 14px 24px 76px; */
+// 	box-sizing: border-box;
 
-	@media ${media.minTablet} {
-		padding-left: 0;
-		padding-right: 0;
-	}
-`;
+// 	@media ${media.minTablet} {
+// 		padding-left: 0;
+// 		padding-right: 0;
+// 	}
+// `;
 
 
 

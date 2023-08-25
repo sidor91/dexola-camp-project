@@ -7,7 +7,8 @@ export const Table = styled.table`
 	text-align: left;
 	table-layout: auto;
 	border-collapse: collapse;
-	margin-top: 16px;
+	margin-top: 32px;
+	margin-bottom: 89px;
 
 	@media ${media.minTablet} {
 		margin-top: 56px;
@@ -15,6 +16,7 @@ export const Table = styled.table`
 
 	@media ${media.minDesktop} {
 		margin-top: 90px;
+		margin-bottom: 191px;
 	}
 `;
 

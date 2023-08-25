@@ -2,13 +2,14 @@ import {
 	Heading,
 	InformationContainer,
 	StyledParagraph,
+	Container,
 } from "./Features.styled";
 import { FeaturesCardSet } from "../FeaturesCardSet/FeaturesCardSet";
 
 
 export const Features = () => {
 	return (
-		<>
+		<Container>
 			<InformationContainer>
 				<Heading>About StarRunner</Heading>
 				<StyledParagraph>
@@ -18,6 +19,6 @@ export const Features = () => {
 				</StyledParagraph>
 			</InformationContainer>
 			<FeaturesCardSet />
-		</>
+		</Container>
 	);
 };

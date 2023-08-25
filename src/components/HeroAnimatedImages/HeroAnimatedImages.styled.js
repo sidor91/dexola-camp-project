@@ -3,7 +3,7 @@ import { media } from "../../utils/mediaRules";
 
 export const ImagesContainer = styled.div`
 	display: flex;
-	width: 100%;
+	width: calc(100%-15px);
 	min-height: 311px;
 	margin-left: 15px;
 	margin-bottom: 16px;
@@ -16,16 +16,23 @@ export const ImagesContainer = styled.div`
 	@media ${media.minDesktop} {
 		width: 466px;
 		margin-bottom: 0;
+		height: 311px;
 	}
 `;
 
 export const Container = styled.div`
 	flex: 1;
+	width: 100%;
 	min-height: 311px;
 	box-sizing: border-box;
 	border: 1px solid var(--color-accent-blue);
 	position: relative;
-	padding-bottom: 50%; 
+	padding-bottom: 50%;
+
+	@media ${media.minDesktop} {
+		height: 311px;
+		padding-bottom: 0;
+	}
 `;
 
 export const StyledImage = styled.img`

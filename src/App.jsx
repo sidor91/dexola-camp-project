@@ -3,7 +3,8 @@ import { MainContainer } from "./components/MainContainer/MainContainer";
 import { Section } from "./components/Section/Section";
 import { Hero } from "./components/Hero/Hero";
 import { Features } from "./components/Features/Features";
-import { NFTTable } from "./components/Table/Table";
+import { NFTTable } from "./components/TopNFT/Table";
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
 					<NFTTable />
 				</Section>
 				<Section sectionName="Join Us" sectionNumber="03"></Section>
-			</MainContainer>
+		  </MainContainer>
+		  {/* <Footer/> */}
 		</>
 	);
 }

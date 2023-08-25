@@ -1,31 +1,34 @@
-import styled from "styled-components";
+import styled, { keyframes} from "styled-components";
 import { media } from "../../utils/mediaRules";
-import Marquee from "react-fast-marquee";
 
-export const StyledMarquee = styled(Marquee)`
+export const MarqueeContainer = styled.div`
+	overflow: hidden;
+`;
+
+const marqueeAnimation = keyframes`
+0%{transform: translateX(100%) }
+100%{transform: translateX(-100%) }
+`;
+
+export const MarqueeText = styled.h1`
+	font: var(--font-hero-animation-text-mobile);
+	box-sizing: border-box;
+	text-transform: uppercase;
+	width: max-content;
+	animation: ${marqueeAnimation} 7s linear;
+	animation-iteration-count: infinite;
 	margin-bottom: 16px;
 	overflow: hidden;
 
-	@media ${media.minDesktop} {
-		position: absolute;
-		left: 0;
-		top: 290px;
-		margin-bottom: 0;
-	}
-`;
-
-export const MarqueeText = styled.p`
-	font: var(--font-hero-animation-text-mobile);
-	text-transform: uppercase;
-	margin-right: 375px;
-
 	@media ${media.minTablet} {
 		font: var(--font-hero-animation-text-tablet);
-		margin-right: 744px;
 	}
 
 	@media ${media.minDesktop} {
 		font: var(--font-hero-animation-text-web);
-		margin-right: 1440px;
+		position: absolute;
+		left: 0;
+		top: 290px;
+		margin-bottom: 0;
 	}
 `;

@@ -5,12 +5,18 @@ import { H3heading, Paragraph, ButtonLink } from "../SharedElements.styled";
 export const Card = styled.li`
 	width: 100%;
 	border: 1px solid var(--color-accent-blue);
-	margin-bottom: 16px;
 	display: flex;
 	flex-direction: column;
 
+	&:not(:last-child) {
+		margin-bottom: 16px;
+
+		@media ${media.minTablet} {
+			margin-bottom: 0;
+		}
+	}
+
 	@media ${media.minTablet} {
-		margin-bottom: 0;
 		width: 33.33%;
 	}
 `;

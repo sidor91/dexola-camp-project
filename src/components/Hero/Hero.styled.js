@@ -5,19 +5,21 @@ import { Paragraph } from "../SharedElements.styled";
 export const StyledHero = styled.section`
 	width: 100%;
 	padding-top: 9px;
-	padding-bottom: 134px;
+	padding-bottom: 148px;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
 
+
 	@media ${media.minTablet} {
 		padding-left: 24px;
 		padding-right: 24px;
+		/* padding-bottom: 148px; */
 	}
 
 	@media ${media.minDesktop} {
 		padding: 0 120px;
-		margin-bottom: 469px;
+		margin-bottom: 546px;
 		justify-content: space-between;
 		flex-direction: row-reverse;
 		border-top: 1px solid var(--color-accent-blue);
@@ -28,10 +30,11 @@ export const StyledHero = styled.section`
 export const StyledParagraph = styled(Paragraph)`
 	margin-left: 15px;
 	display: block;
-	width: 100%;
+	width: calc(100%-15px);
 
 	@media ${media.minTablet} {
 		margin-left: 0;
+		width: 100%;
 	}
 
 	@media ${media.minDesktop} {
