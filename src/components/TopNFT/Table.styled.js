@@ -2,22 +2,28 @@ import styled from "styled-components";
 import { media } from "../../utils/mediaRules";
 import { Paragraph, H3heading } from "../SharedElements.styled";
 
+export const Container = styled.div`
+	width: 100%;
+	padding: 32px 24px 89px;
+	box-sizing: border-box;
+
+	@media ${media.minTablet} {
+		padding-top: 56px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	@media ${media.minDesktop} {
+		padding-top: 90px;
+		padding-bottom: 191px;
+	}
+`;
+
 export const Table = styled.table`
 	width: 100%;
 	text-align: left;
 	table-layout: auto;
 	border-collapse: collapse;
-	margin-top: 32px;
-	margin-bottom: 89px;
-
-	@media ${media.minTablet} {
-		margin-top: 56px;
-	}
-
-	@media ${media.minDesktop} {
-		margin-top: 90px;
-		margin-bottom: 191px;
-	}
 `;
 
 export const TH = styled.th`

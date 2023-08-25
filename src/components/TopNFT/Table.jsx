@@ -1,4 +1,5 @@
 import {
+	Container,
 	Table,
 	TH,
 	TR,
@@ -24,7 +25,8 @@ export const NFTTable = () => {
         setIsMobile(dimensions < 744);
     },[dimensions])
 
-    return (
+	return (
+		<Container>
 			<Table>
 				{!isMobile && (
 					<thead>
@@ -85,7 +87,8 @@ export const NFTTable = () => {
 					)}
 				</tbody>
 			</Table>
-		);
+		</Container>
+	);
 }
 
 

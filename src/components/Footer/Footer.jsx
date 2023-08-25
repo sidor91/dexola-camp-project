@@ -2,8 +2,7 @@ import {
 	StyledFooter,
 	SocialContainer,
 	Icon,
-	Copyright,
-	Designed,
+	Text,
 	CopyrightContainer,
 	DesignedContainer,
 	DesignAndCopyContainer,
@@ -22,10 +21,10 @@ export const Footer = () => {
 			</SocialContainer>
 			<DesignAndCopyContainer>
 				<DesignedContainer>
-					<Designed>Designed by Dexola - 2023</Designed>
+					<Text>Designed by Dexola - 2023</Text>
 				</DesignedContainer>
 				<CopyrightContainer>
-					<Copyright>© All rights reserved</Copyright>
+					<Text>© All rights reserved</Text>
 				</CopyrightContainer>
 			</DesignAndCopyContainer>
 		</StyledFooter>

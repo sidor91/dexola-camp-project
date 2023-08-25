@@ -20,7 +20,7 @@ function App() {
 				</Section>
 				<Section sectionName="Join Us" sectionNumber="03"></Section>
 		  </MainContainer>
-		  {/* <Footer/> */}
+		  <Footer/>
 		</>
 	);
 }
