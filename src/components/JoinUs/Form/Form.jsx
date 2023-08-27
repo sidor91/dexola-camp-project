@@ -11,8 +11,8 @@ import {
 } from "./Form.styled";
 import asterisk from "../../../assets/Pics/asterisk.svg";
 import { useState, useRef } from "react";
-import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
+import "./phoneInput.css"
 import { useFormik } from "formik";
 
 
