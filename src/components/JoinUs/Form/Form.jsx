@@ -4,60 +4,31 @@ import {
 	SubmitButton,
 	InputContainer,
 	IconAsterisk,
-	IconEye,
-	IconEyeClosed,
-	IconEyeContainer,
 	ButtonText,
 } from "./Form.styled";
 import asterisk from "../../../assets/Pics/asterisk.svg";
-import { useState, useRef } from "react";
+// import { useState, } from "react";
 import PhoneInput from "react-phone-number-input";
-import "./phoneInput.css"
 import { useFormik } from "formik";
-
+import { PasswordInput } from "./PasswordInput";
 
 export const Form = () => {
-	const [isPasswordShown, setIsPasswordShown] = useState(false);
-	const [isConfirmationPasswordShown, setIsConfirmationPasswordShown] =
-		useState(false);
-	const passwordref = useRef(null);
-    const confirmPasswordRef = useRef(null);
 
-	const togglePassword = () => {
-		setIsPasswordShown(!isPasswordShown);
-		if (isPasswordShown) {
-			passwordref.current.type = "password";
-		} else {
-			passwordref.current.type = "text";
-		}
+	const onSubmit = (values) => {
+		console.log(values);
 	};
 
-	const toggleConfirmationPassword = () => {
-		setIsConfirmationPasswordShown(!isConfirmationPasswordShown);
-		if (isConfirmationPasswordShown) {
-			confirmPasswordRef.current.type = "password";
-		} else {
-			confirmPasswordRef.current.type = "text";
-		}
-    };
+	const initialValues = {
+		email: "",
+		phoneNumber: "",
+		password: "",
+		confirmPassword: "",
+	};
 
-    const onSubmit = (values) => {
-			console.log(values);
-		};
-    
-    const initialValues = {
-        email: '',
-        phoneNumber: '',
-        password: '',
-        confirmPassword: ''
-    }
-
-    var formik = useFormik({
-        initialValues, 
-        onSubmit,
-    })
-
-    
+	var formik = useFormik({
+		initialValues,
+		onSubmit,
+	});
 
 	return (
 		<StyledForm onSubmit={formik.handleSubmit}>
@@ -79,24 +50,8 @@ export const Form = () => {
 					withCountryCallingCode={true}
 				/>
 			</InputContainer>
-			<InputContainer>
-				<IconAsterisk src={asterisk} />
-				<Input placeholder="Password" type="password" ref={passwordref} />
-				<IconEyeContainer onClick={togglePassword}>
-					{isPasswordShown ? <IconEye /> : <IconEyeClosed />}
-				</IconEyeContainer>
-			</InputContainer>
-			<InputContainer>
-				<IconAsterisk src={asterisk} />
-				<Input
-					placeholder="Confirm Password"
-					type="password"
-					ref={confirmPasswordRef}
-				/>
-				<IconEyeContainer onClick={toggleConfirmationPassword}>
-					{isConfirmationPasswordShown ? <IconEye /> : <IconEyeClosed />}
-				</IconEyeContainer>
-			</InputContainer>
+			<PasswordInput placeholder="Password" ></PasswordInput>
+			<PasswordInput placeholder="Confirm Password" ></PasswordInput>
 			<SubmitButton type="submit">
 				<ButtonText>Send it</ButtonText>
 			</SubmitButton>
