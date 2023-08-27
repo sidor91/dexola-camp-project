@@ -99,7 +99,7 @@
 
 .PhoneInputCountry {
 	position: relative;
-	align-self: stretch;
+	/* align-self: stretch; */
 	display: flex;
 	align-items: center;
 	margin-bottom: 10px;
