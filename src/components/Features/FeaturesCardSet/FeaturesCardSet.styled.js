@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { media } from "../../utils/mediaRules";
+import { media } from "../../../utils/mediaRules";
 
 export const CardsContainer = styled.ul`
 	width: 100%;

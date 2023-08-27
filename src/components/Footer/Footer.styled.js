@@ -38,6 +38,7 @@ export const SocialContainer = styled.div`
 	box-sizing: border-box;
 
 	@media ${media.minTablet} {
+		height: fit-content;
 		margin-bottom: 0;
 		padding-left: 24px;
 		gap: 24px;

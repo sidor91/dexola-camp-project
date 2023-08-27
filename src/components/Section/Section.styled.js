@@ -29,21 +29,11 @@ export const StyledSectionHeader = styled(H2heading)`
 		padding-left: 0;
 		padding-right: 0;
 		padding-bottom: 16px;
+		line-height: 1.4;
 	}
 `;
 
-// export const Container = styled.div`
-// 	width: 100%;
-// 	padding-left: 24px;
-// 	padding-right: 24px;
-// 	/* padding: 14px 24px 76px; */
-// 	box-sizing: border-box;
 
-// 	@media ${media.minTablet} {
-// 		padding-left: 0;
-// 		padding-right: 0;
-// 	}
-// `;
 
 
 

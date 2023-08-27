@@ -46,6 +46,11 @@ export const ButtonLink = styled.a`
 	color: var(--color-white);
 	text-decoration: none;
 	justify-content: center;
+	opacity: 1;
+
+	&:hover {
+		background-color: var(--color-button-hover);
+	}
 
 	font: var(--font-button-link-mobile);
 

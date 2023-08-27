@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { media } from "../../utils/mediaRules";
+import { media } from "../../../utils/mediaRules";
 
 export const ImagesContainer = styled.div`
 	display: flex;

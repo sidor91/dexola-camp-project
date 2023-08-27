@@ -22,10 +22,12 @@
 	--color-background: #060412;
 	--color-warning-rose: #eb3795;
 	--color-button: #272a2e;
+	--color-button-hover: rgba(39, 42, 46, 0.90);
 
 	--width-mobile: 375px;
 	--width-tablet: 744px;
 	--width-web: 1440px;
+
 }
 
 body {

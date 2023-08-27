@@ -1,6 +1,6 @@
 import { StyledHeader, StyledButtonLink, StyledIcon } from "./Header.styled";
 import Logo from "../../assets/Pics/Logo.svg";
-import iconArrow from "../../assets/Pics/icon_arrow.svg";
+import iconArrow from "../../assets/Pics/icon_arrow-up.svg";
 
 export const Header = () => {
 	return (

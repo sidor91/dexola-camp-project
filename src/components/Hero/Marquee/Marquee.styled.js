@@ -1,5 +1,5 @@
 import styled, { keyframes} from "styled-components";
-import { media } from "../../utils/mediaRules";
+import { media } from "../../../utils/mediaRules";
 
 export const MarqueeContainer = styled.div`
 	overflow: hidden;
