@@ -38,7 +38,9 @@ export const Input = styled.input`
 	box-sizing: border-box;
 	width: 100%;
 
-   
+	&:focus {
+		outline: none;
+	}
 
 	@media ${media.minTablet} {
 		font: var(--font-body-tablet);
