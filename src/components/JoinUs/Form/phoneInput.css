@@ -46,8 +46,10 @@
 
 
 .PhoneInputCountryIcon {
-	width: calc(var(--PhoneInputCountryFlag-height) * var(--PhoneInputCountryFlag-aspectRatio));
-	height: var(--PhoneInputCountryFlag-height);
+	display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px
 }
 
 .PhoneInputCountryIcon--square {
