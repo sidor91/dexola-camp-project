@@ -81,7 +81,8 @@
 	/* 3rd party <SVG/> flag icons won't stretch if they have `width` and `height`.
 	   Also, if an <SVG/> icon's aspect ratio was different, it wouldn't fit too. */
 	width: 100%;
-	height: fit-content;
+	max-width: 30px;
+	height: auto;
 	border-radius: 3px;
 	margin-top: auto;
 	margin-bottom: auto;
@@ -117,7 +118,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 30px;
+	height: 100%;
 	width: 100%;
 	z-index: 1;
 	border: 0;
