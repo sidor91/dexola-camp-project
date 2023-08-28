@@ -8,9 +8,7 @@ export const Container = styled.div`
 	box-sizing: border-box;
 
 	@media ${media.minTablet} {
-		padding-top: 56px;
-		padding-left: 0;
-		padding-right: 0;
+		padding: 56px 0 90px;
 	}
 
 	@media ${media.minDesktop} {

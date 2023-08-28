@@ -5,18 +5,23 @@ import { ButtonLink } from "../SharedElements.styled";
 
 export const StyledHeader = styled.header`
 	min-width: var(--width-mobile);
-	max-width: var(--width-web);
-	padding: 4px 24px;
-	display: flex;
-	justify-content: space-between;
-	margin-left: auto;
-	margin-right: auto;
+	max-width: 100%;
 	box-sizing: border-box;
 	position: sticky;
 	top: 0;
 	z-index: 999;
 	background-color: var(--color-background);
+`;
+
+export const Container = styled.div`
+	max-width: var(--width-web);
+	padding: 4px 24px;
+	display: flex;
+	justify-content: space-between;
 	box-sizing: border-box;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
 
 	@media ${media.minTablet} {
 		padding-top: 15px;
@@ -30,20 +35,27 @@ export const StyledHeader = styled.header`
 `;
 
 export const StyledButtonLink = styled(ButtonLink)`
-	width: 136px;
-	padding: 10px 0;
+	padding: 10px 16px;
 
 	@media ${media.minTablet} {
-		padding: 12px 0;
-		width: 235px;
+		padding: 12px 67px;
 	}
 `;
 
-export const StyledIcon = styled.img`
-	width: 24px;
-	height: 17px;
-	margin-right: 8px;
+export const ArrowUpIcon = styled.img`
+	width: 16px;
+	height: 16px;
+	margin-right: 12px;
 	margin-top: auto;
 	margin-bottom: auto;
+
+	@media ${media.minTablet} {
+		margin-right: 6.45px;
+	}
 `;
 
+
+export const LogoIcon = styled.img`
+width: 34.5px;
+height: 19.5px;
+`

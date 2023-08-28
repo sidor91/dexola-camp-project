@@ -3,9 +3,15 @@ import { media } from "../../../utils/mediaRules";
 
 export const ImagesContainer = styled.div`
 	display: flex;
-	width: 100%;
+	width: calc(100% - 48px);
+	margin-left: auto;
+	margin-right: auto;
 	min-height: 311px;
 	margin-bottom: 16px;
+
+	@media ${media.minTablet} {
+		margin-bottom: -24px;
+	}
 
 	@media ${media.minDesktop} {
 		width: 466px;
@@ -26,6 +32,8 @@ export const Container = styled.div`
 	@media ${media.minDesktop} {
 		height: 311px;
 		padding-bottom: 0;
+		border-top: none;
+		border-bottom: none;
 	}
 `;
 

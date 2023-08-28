@@ -7,6 +7,8 @@ export const StyledSection = styled.section`
 	box-sizing: border-box;
 	min-width: var(--width-mobile);
 	max-width: var(--width-web);
+	margin-left: auto;
+	margin-right: auto;
 
 	@media ${media.minTablet} {
 		padding-left: 24px;

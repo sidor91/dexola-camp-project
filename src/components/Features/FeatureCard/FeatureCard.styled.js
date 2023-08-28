@@ -45,13 +45,10 @@ export const CardDescriptionContainer = styled.div`
 
 	@media ${media.minTablet} {
 		gap: 0;
-		/* padding-left: 16px;
-		padding-right: 16px; */
 	}
 
 	@media ${media.minDesktop} {
-		padding-top: 24px;
-		padding-bottom: 24px;
+		padding: 24px;
 		height: 258px;
 	}
 `;
@@ -95,16 +92,6 @@ export const StyledButtonLink = styled(ButtonLink)`
 	margin-top: auto;
 	padding-top: 12px;
 	padding-bottom: 12px;
-	/* margin-left: auto;
-	margin-right: auto; */
-
-	/* @media ${media.minTablet} {
-		width: 189px;
-	} */
-
-	@media ${media.minDesktop} {
-		width: 325px;
-	}
 `;
 
 export const StyledIcon = styled.img`

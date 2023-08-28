@@ -29,6 +29,7 @@ export const InformationContainer = styled.div`
 
 	@media ${media.minDesktop} {
 		margin-top: 20px;
+		flex: 1;
 	}
 `;
 

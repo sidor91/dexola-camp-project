@@ -48,7 +48,8 @@ export const ButtonLink = styled.a`
 	justify-content: center;
 	opacity: 1;
 	text-transform: uppercase;
-	
+	cursor: pointer;
+
 	&:hover {
 		background-color: var(--color-button-hover);
 	}

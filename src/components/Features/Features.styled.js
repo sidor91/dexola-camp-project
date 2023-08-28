@@ -4,17 +4,15 @@ import { H3heading, Paragraph } from "../SharedElements.styled";
 
 export const Container = styled.div`
 	width: 100%;
-	padding-left: 24px;
-	padding-right: 24px;
-	padding-bottom: 89px;
-	/* padding: 14px 24px 76px; */
+	padding: 32px 24px 89px;
 	box-sizing: border-box;
 
 	@media ${media.minTablet} {
-		padding-left: 0;
-		padding-right: 0;
+		padding: 56px 0 90px;
 	}
+
 	@media ${media.minDesktop} {
+		padding-top: 90px;
 		padding-bottom: 191px;
 	}
 `;
@@ -23,17 +21,14 @@ export const Container = styled.div`
 
 export const InformationContainer = styled.div`
 	margin-bottom: 24px;
-	margin-top: 32px;
 
 	@media ${media.minTablet} {
 		margin-bottom: 40px;
-		margin-top: 56px;
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 	}
 
 	@media ${media.minDesktop} {
-		margin-top: 90px;
 		margin-bottom: 90px;
 		justify-content: unset;
 	}
@@ -44,6 +39,7 @@ export const Heading = styled(H3heading)`
 
 	@media ${media.minTablet} {
 		margin-bottom: auto;
+		margin-right: 72px;
 	}
 
 	@media ${media.minDesktop} {
@@ -62,6 +58,7 @@ export const StyledParagraph = styled(Paragraph)`
 
 	@media ${media.minDesktop} {
 		width: 601px;
+		margin-top: 6px;
 	}
 `;
 

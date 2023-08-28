@@ -3,6 +3,14 @@ import { media } from "../../../utils/mediaRules";
 
 export const MarqueeContainer = styled.div`
 	overflow: hidden;
+
+	@media ${media.minTablet} {
+		margin-bottom: 13px;
+	}
+
+	@media ${media.minTablet} {
+		margin-bottom: 0;
+	}
 `;
 
 const marqueeAnimation = keyframes`
@@ -17,7 +25,6 @@ export const MarqueeText = styled.h1`
 	width: max-content;
 	animation: ${marqueeAnimation} 7s linear;
 	animation-iteration-count: infinite;
-	margin-bottom: 16px;
 	overflow: hidden;
 
 	@media ${media.minTablet} {
@@ -29,6 +36,5 @@ export const MarqueeText = styled.h1`
 		position: absolute;
 		left: 0;
 		top: 290px;
-		margin-bottom: 0;
 	}
 `;

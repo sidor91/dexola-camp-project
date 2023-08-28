@@ -65,7 +65,7 @@ export const Form = () => {
 	} = formik.errors;
 
 	return (
-		<StyledForm onSubmit={formik.handleSubmit}>
+		<StyledForm onSubmit={formik.handleSubmit} id="joinus">
 			<InputContainer $iserror={touchedEmail && errorsEmail}>
 				<IconAsterisk src={asterisk} />
 				<Input

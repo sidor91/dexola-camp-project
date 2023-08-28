@@ -6,7 +6,7 @@ export const StyledMainContainer = styled.main`
 	flex-direction: column;
 	justify-content: center;
 	min-width: var(--width-mobile);
-	max-width: var(--width-web);
+	/* max-width: var(--width-web); */
 	box-sizing: border-box;
 	margin-left: auto;
 	margin-right: auto;

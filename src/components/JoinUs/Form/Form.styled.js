@@ -18,6 +18,8 @@ export const StyledForm = styled.form`
 	}
 
 	@media ${media.minDesktop} {
+		width: 50%;
+		margin-left: 66px;
 		margin-top: 0;
 		padding-top: 54px;
 		padding-bottom: 55px;

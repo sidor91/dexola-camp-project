@@ -4,27 +4,32 @@ import { Paragraph } from "../SharedElements.styled";
 
 export const StyledFooter = styled.footer`
 	min-width: var(--width-mobile);
+	width: 100%;
+
+	border-top: 1px solid var(--color-accent-blue);
+`;
+
+export const Container = styled.div`
 	max-width: var(--width-web);
-	height: 134px;
+	margin-left: auto;
+	margin-right: auto;
 	display: flex;
 	flex-direction: column;
-	border-top: 1px solid var(--color-accent-blue);
 	align-items: center;
 	box-sizing: border-box;
 	position: relative;
-	margin-left: auto;
-	margin-right: auto;
 
 	@media ${media.minTablet} {
-		height: 100px;
 		flex-direction: row-reverse;
-		padding: 10px 24px;
 		justify-content: center;
+		padding-left: 24px;
+		padding-right: 24px;
 	}
 
 	@media ${media.minDesktop} {
 		padding-left: 120px;
 		padding-right: 120px;
+		height: 100px;
 	}
 `;
 
@@ -33,13 +38,17 @@ export const SocialContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 	gap: 32px;
-	height: 56px;
-	margin-bottom: 8px;
+	/* height: 56px; */
+
 	box-sizing: border-box;
+	padding-top: 12px;
+	padding-bottom: 12px;
 
 	@media ${media.minTablet} {
 		height: fit-content;
 		margin-bottom: 0;
+		padding-top: 34px;
+		padding-bottom: 34px;
 		padding-left: 24px;
 		gap: 24px;
 		width: 50%;
@@ -60,9 +69,24 @@ export const SocialContainer = styled.div`
 	}
 `;
 
-export const Icon = styled.img`
-	width: 32px;
-	height: 32px;
+export const DesignAndCopyContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 8px;
+	padding-bottom: 34px;
+
+	@media ${media.minTablet} {
+		width: 50%;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	@media ${media.minDesktop} {
+		width: 100%;
+		height: 100%;
+		flex-direction: row;
+	}
 `;
 
 export const CopyrightContainer = styled.div`
@@ -109,19 +133,9 @@ export const DesignedContainer = styled.div`
 	}
 `;
 
-export const DesignAndCopyContainer = styled.div`
-	display: flex;
-	flex-direction: column;
-
-	@media ${media.minTablet} {
-		width: 50%;
-	}
-
-	@media ${media.minDesktop} {
-		width: 100%;
-		height: 100%;
-		flex-direction: row;
-	}
+export const Icon = styled.img`
+	width: 32px;
+	height: 32px;
 `;
 
 export const Text = styled(Paragraph)`
