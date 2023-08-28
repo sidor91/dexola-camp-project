@@ -8,7 +8,7 @@ export const Header = () => {
 			<img src={Logo} />
 			<StyledButtonLink href="https://dexola.com/" target="blanc">
 				<StyledIcon src={iconArrow} />
-				<span style={{ textTransform: "capitalize" }}>join now</span>
+				<span>join now</span>
 			</StyledButtonLink>
 		</StyledHeader>
 	);

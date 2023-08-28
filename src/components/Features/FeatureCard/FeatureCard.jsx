@@ -27,7 +27,7 @@ export const FeatureCard = ({ image, number, title, description }) => {
 					target="blanc"
 				>
 					<StyledIcon src={iconArrow} />
-					<span style={{ textTransform: "uppercase" }}>discover more</span>
+					<span>discover more</span>
 				</StyledButtonLink>
 			</CardDescriptionContainer>
 		</Card>

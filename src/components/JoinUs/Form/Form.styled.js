@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { media } from "../../../utils/mediaRules";
-import { Paragraph, H3heading } from "../../SharedElements.styled";
 import { PiEye, PiEyeClosed } from "react-icons/pi";
-
 
 export const StyledForm = styled.form`
 	padding: 24px 16px;
@@ -21,8 +19,8 @@ export const StyledForm = styled.form`
 
 	@media ${media.minDesktop} {
 		margin-top: 0;
-        padding-top: 54px;
-        padding-bottom: 55px;
+		padding-top: 54px;
+		padding-bottom: 55px;
 	}
 `;
 
@@ -38,6 +36,7 @@ export const Input = styled.input`
 	box-sizing: border-box;
 	width: 100%;
 
+	/* border-bottom: 1px solid var(--color-white); */
 	&:focus {
 		outline: none;
 	}
@@ -58,12 +57,11 @@ export const SubmitButton = styled.button`
 	display: flex;
 	background-color: var(--color-button);
 	color: var(--color-white);
-	/* justify-content: center; */
 	border: none;
 	padding-top: 12px;
 	padding-bottom: 12px;
-	padding-left: 126px;
-	width: 294px;
+	padding-left: calc(50% - 20.5px);
+	width: 100%;
 	cursor: pointer;
 
 	font: var(--font-button-link-web-tablet);
@@ -81,20 +79,27 @@ export const SubmitButton = styled.button`
 export const InputContainer = styled.div`
 	margin-bottom: 28px;
 	position: relative;
-	border-bottom: 1px solid var(--color-white);
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: ${(prop) =>
+		prop.$iserror ? "var(--color-warning-rose)" : "var(--color-white)"};
+
+	&:focus-within {
+		border-bottom-color: var(--color-accent-blue);
+	}
 `;
 
 export const IconAsterisk = styled.img`
-width: 10px;
-height: auto;
-position: absolute;
-top: 14px;
-left: 0;
-`
+	width: 10px;
+	height: auto;
+	position: absolute;
+	top: 14px;
+	left: 0;
+`;
 
 export const IconEye = styled(PiEye)`
-width: 24px;
-height: 24px;
+	width: 24px;
+	height: 24px;
 `;
 
 export const IconEyeClosed = styled(PiEyeClosed)`
@@ -106,8 +111,8 @@ export const IconEyeContainer = styled.div`
 	position: absolute;
 	top: 8px;
 	right: 0;
-    width: 24px;
-    height: 24px;
+	width: 24px;
+	height: 24px;
 `;
 
 export const ButtonText = styled.span`
@@ -125,10 +130,18 @@ export const ButtonText = styled.span`
 
 		@media ${media.minTablet} {
 			width: 24px;
-            left: -23.2px
+			left: -23.2px;
 		}
 
 		@media ${media.minDesktop} {
 		}
 	}
+`;
+
+export const ErrorMessage = styled.span`
+	font: var(--font-form-error-message);
+	position: absolute;
+	top: 44px;
+	left: 0;
+	color: var(--color-warning-rose);
 `;

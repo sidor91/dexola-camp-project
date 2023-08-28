@@ -10,7 +10,7 @@ import asterisk from "../../../assets/Pics/asterisk.svg";
 import { useState, useRef } from "react";
 import "./phoneInput.css";
 
-export const PasswordInput = (props) => {
+export const PasswordInput = ({children, $iserror, ...props}) => {
     const [isPasswordShown, setIsPasswordShown] = useState(false);
     const passwordref = useRef(null);
 
@@ -24,13 +24,13 @@ export const PasswordInput = (props) => {
 	};
 
 	return (
-		<InputContainer>
+		<InputContainer $iserror={$iserror}>
 			<IconAsterisk src={asterisk} />
 			<Input {...props} type="password" ref={passwordref} />
 			<IconEyeContainer onClick={togglePassword}>
 				{isPasswordShown ? <IconEye /> : <IconEyeClosed />}
 			</IconEyeContainer>
-			{props.children}
+			{children}
 		</InputContainer>
 	);
 };

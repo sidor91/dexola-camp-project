@@ -6,7 +6,7 @@ import { ButtonLink } from "../SharedElements.styled";
 export const StyledHeader = styled.header`
 	min-width: var(--width-mobile);
 	max-width: var(--width-web);
-	padding: 4px 15px;
+	padding: 4px 24px;
 	display: flex;
 	justify-content: space-between;
 	margin-left: auto;
@@ -19,7 +19,8 @@ export const StyledHeader = styled.header`
 	box-sizing: border-box;
 
 	@media ${media.minTablet} {
-		padding: 15px 32px;
+		padding-top: 15px;
+		padding-bottom: 15px;
 	}
 
 	@media ${media.minDesktop} {

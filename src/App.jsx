@@ -6,6 +6,7 @@ import { Features } from "./components/Features/Features";
 import { NFTTable } from "./components/TopNFT/Table";
 import { Footer } from "./components/Footer/Footer";
 import { JoinUs } from "./components/JoinUs/JoinUs";
+import { Toast } from "./components/ToastContainer";
 
 function App() {
   return (
@@ -19,11 +20,12 @@ function App() {
 				<Section sectionName="Top NFTs" sectionNumber="02">
 					<NFTTable />
 				</Section>
-			  <Section sectionName="Join Us" sectionNumber="03">
-				  <JoinUs/>
+				<Section sectionName="Join Us" sectionNumber="03">
+					<JoinUs />
 				</Section>
-		  </MainContainer>
-		  <Footer/>
+				<Toast/>
+			</MainContainer>
+			<Footer />
 		</>
 	);
 }

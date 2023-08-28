@@ -36,7 +36,7 @@ export const Image = styled.img`
 `;
 
 export const CardDescriptionContainer = styled.div`
-	padding: 16px 24px;
+	padding: 16px;
 	flex: 1;
 	display: flex;
 	flex-direction: column;
@@ -45,8 +45,8 @@ export const CardDescriptionContainer = styled.div`
 
 	@media ${media.minTablet} {
 		gap: 0;
-		padding-left: 16px;
-		padding-right: 16px;
+		/* padding-left: 16px;
+		padding-right: 16px; */
 	}
 
 	@media ${media.minDesktop} {
@@ -91,16 +91,16 @@ export const CardNumber = styled.span`
 `;
 
 export const StyledButtonLink = styled(ButtonLink)`
-	width: 297px;
+	width: 100%;
 	margin-top: auto;
 	padding-top: 12px;
 	padding-bottom: 12px;
-	margin-left: auto;
-	margin-right: auto;
+	/* margin-left: auto;
+	margin-right: auto; */
 
-	@media ${media.minTablet} {
+	/* @media ${media.minTablet} {
 		width: 189px;
-	}
+	} */
 
 	@media ${media.minDesktop} {
 		width: 325px;

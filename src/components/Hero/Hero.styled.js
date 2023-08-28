@@ -4,18 +4,12 @@ import { Paragraph } from "../SharedElements.styled";
 
 export const StyledHero = styled.section`
 	width: 100%;
+	padding: 9px 24px 148px;
 	padding-top: 9px;
 	padding-bottom: 148px;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
-
-
-	@media ${media.minTablet} {
-		padding-left: 24px;
-		padding-right: 24px;
-		/* padding-bottom: 148px; */
-	}
 
 	@media ${media.minDesktop} {
 		padding: 0 120px;
@@ -28,7 +22,6 @@ export const StyledHero = styled.section`
 `;
 
 export const StyledParagraph = styled(Paragraph)`
-	margin-left: 15px;
 	display: block;
 	width: calc(100%-15px);
 
