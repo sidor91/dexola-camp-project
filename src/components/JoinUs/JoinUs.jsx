@@ -7,10 +7,10 @@ import {
 } from "./JoinUs.styled";
 import useWindowDimensions from '@/utils/hooks/useWindowDimensions';
 import { useState, useEffect } from "react";
-import { Form } from '@/components/JoinUs/Form/Form';
+import Form from "@/components/JoinUs/Form/Form";
 import iconArrowRight from "@/assets/Pics/icon_arrow-right.svg";
 
-export const JoinUs = () => {
+function JoinUs () {
     const [isDesktop, setIsDesktop] = useState(false);
     const dimensions = useWindowDimensions();
 
@@ -37,3 +37,5 @@ export const JoinUs = () => {
 		</Container>
 	);
 };
+
+export default JoinUs;

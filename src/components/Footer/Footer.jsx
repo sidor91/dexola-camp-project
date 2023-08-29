@@ -10,7 +10,7 @@ import {
 } from "./Footer.styled";
 import { icons } from "@/assets/Pics/footerIcons";
 
-export const Footer = () => {
+function Footer () {
 	return (
 		<StyledFooter>
 			<Container>
@@ -33,3 +33,5 @@ export const Footer = () => {
 		</StyledFooter>
 	);
 };
+
+export default Footer;

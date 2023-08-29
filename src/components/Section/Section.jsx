@@ -3,7 +3,7 @@ import {
 	StyledSectionHeader,
 } from "./Section.styled";
 
-export const Section = ({ children, sectionName, sectionNumber}) => {
+function Section ({ children, sectionName, sectionNumber}) {
 	return (
 		<StyledSection>
 			<StyledSectionHeader>
@@ -14,3 +14,5 @@ export const Section = ({ children, sectionName, sectionNumber}) => {
 		</StyledSection>
 	);
 };
+
+export default Section;

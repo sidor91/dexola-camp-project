@@ -4,10 +4,10 @@ import {
 	StyledParagraph,
 	Container,
 } from "./Features.styled";
-import { FeaturesCardSet } from "@/components/Features/FeaturesCardSet/FeaturesCardSet";
+import FeaturesCardSet from "@/components/Features/FeaturesCardSet/FeaturesCardSet";
 
 
-export const Features = () => {
+function Features () {
 	return (
 		<Container>
 			<InformationContainer>
@@ -22,3 +22,5 @@ export const Features = () => {
 		</Container>
 	);
 };
+
+export default Features;

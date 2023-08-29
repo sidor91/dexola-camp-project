@@ -10,7 +10,7 @@ import asterisk from "@/assets/Pics/asterisk.svg";
 import { useState, useRef } from "react";
 import "./phoneInput.css";
 
-export const PasswordInput = ({children, $iserror, ...props}) => {
+function PasswordInput ({children, $iserror, ...props}) {
     const [isPasswordShown, setIsPasswordShown] = useState(false);
     const passwordref = useRef(null);
 
@@ -34,3 +34,5 @@ export const PasswordInput = ({children, $iserror, ...props}) => {
 		</InputContainer>
 	);
 };
+
+export default PasswordInput;

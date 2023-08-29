@@ -1,8 +1,8 @@
-import { FeatureCard } from "@/components/Features/FeatureCard/FeatureCard"
+import FeatureCard from "@/components/Features/FeatureCard/FeatureCard";
 import { CardsContainer } from "./FeaturesCardSet.styled";
 import { featuresList } from "./featuresList";
 
-export const FeaturesCardSet = () => {
+function FeaturesCardSet  ()  {
     return (
 			<CardsContainer>
 				{featuresList.map(({ image, title, number, description }, index) => (
@@ -19,3 +19,5 @@ export const FeaturesCardSet = () => {
 		);
 
 }
+
+export default FeaturesCardSet;

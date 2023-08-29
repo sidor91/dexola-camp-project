@@ -7,7 +7,7 @@ import {
 import images1 from "@/assets/Pics/heroPics/pic1Hero/heroPic-1";
 import images2 from "@/assets/Pics/heroPics/pic2Hero/heroPic-2";
 
-export const HeroAnimatedImages = () => {
+function HeroAnimatedImages () {
 	const [currentIndex, setCurrentIndex] = useState(0);
 
 	useEffect(() => {
@@ -58,3 +58,4 @@ export const HeroAnimatedImages = () => {
 	);
 };
 
+export default HeroAnimatedImages;

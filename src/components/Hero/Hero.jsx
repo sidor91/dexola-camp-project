@@ -1,8 +1,8 @@
 import { StyledHero, StyledParagraph, Container } from "./Hero.styled";
-import { HeroAnimatedImages } from "@/components/Hero/HeroAnimatedImages/HeroAnimatedImages";
-import { Marquee } from "@/components/Hero/Marquee/Marquee";
+import HeroAnimatedImages from "@/components/Hero/HeroAnimatedImages/HeroAnimatedImages";
+import Marquee from "@/components/Hero/Marquee/Marquee";
 
-export const Hero = () => {
+function Hero () {
 	return (
 		<StyledHero>
 			<Container>
@@ -17,3 +17,5 @@ export const Hero = () => {
 		</StyledHero>
 	);
 };
+
+export default Hero;

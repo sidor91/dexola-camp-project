@@ -17,7 +17,7 @@ import useWindowDimensions from "@/utils/hooks/useWindowDimensions";
 import { useState, useEffect } from 'react';
 import images from '@/assets/Pics/TopNFTPics/topNFTpics'
 
-export const NFTTable = () => {
+function NFTTable () {
     const dimensions = useWindowDimensions();
     const [isMobile, setIsMobile] = useState(dimensions < 744);
 
@@ -93,7 +93,7 @@ export const NFTTable = () => {
 
 
 
-
+export default NFTTable;
 
 
 

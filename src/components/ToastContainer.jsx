@@ -1,7 +1,7 @@
 import { ToastContainer } from "react-toastify";
  import "react-toastify/dist/ReactToastify.css";
 
-export const Toast = () => {
+function Toast () {
 	return (
 		<ToastContainer
 			position="top-center"
@@ -17,3 +17,5 @@ export const Toast = () => {
 		/>
 	);
 };
+
+export default Toast;

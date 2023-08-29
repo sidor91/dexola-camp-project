@@ -8,8 +8,7 @@ import {
 import Logo from "@/assets/Pics/Logo.svg";
 import iconArrow from "@/assets/Pics/icon_arrow-up.svg";
 
-export const Header = () => {
-
+function Header() {
 	const scrollToElement = () => {
 		const element = document.getElementById("joinus");
 		if (element) {
@@ -18,16 +17,22 @@ export const Header = () => {
 			});
 		}
 	};
-	
+
 	return (
 		<StyledHeader>
 			<Container>
-				<LogoIcon src={Logo} alt="Logo" aria-label="Logo DX"/>
-				<StyledButtonLink onClick={scrollToElement} aria-label="join now" href="#">
-					<ArrowUpIcon src={iconArrow} alt="arrow up" aria-hidden="true"/>
+				<LogoIcon src={Logo} alt="Logo" aria-label="Logo DX" />
+				<StyledButtonLink
+					onClick={scrollToElement}
+					aria-label="join now"
+					href="#"
+				>
+					<ArrowUpIcon src={iconArrow} alt="arrow up" aria-hidden="true" />
 					<span>join now</span>
 				</StyledButtonLink>
 			</Container>
 		</StyledHeader>
 	);
-};
+}
+
+export default Header;

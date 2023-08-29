@@ -1,16 +1,21 @@
-import { Header } from "@/components/Header/Header";
-import { MainContainer } from "@/components/MainContainer/MainContainer";
-import { Section } from "@/components/Section/Section";
-import { Hero } from "@/components/Hero/Hero";
-import { Features } from "@/components/Features/Features";
-import { NFTTable } from "@/components/TopNFT/NFTTable";
-import { Footer } from "@/components/Footer/Footer";
-import { JoinUs } from "@/components/JoinUs/JoinUs";
-import { Toast } from "@/components/ToastContainer";
+import { Suspense, lazy } from "react";
+import Fallback from '@/components/Fallback/Fallback'
+
+const Header = lazy(() => import("@/components/Header/Header"));
+const Section = lazy(() => import("@/components/Section/Section"));
+const Hero = lazy(() => import("@/components/Hero/Hero"));
+const Features = lazy(() => import("@/components/Features/Features"));
+const NFTTable = lazy(() => import("@/components/TopNFT/NFTTable"));
+const Footer = lazy(() => import("@/components/Footer/Footer"));
+const JoinUs = lazy(() => import("@/components/JoinUs/JoinUs"));
+const Toast = lazy(() => import("@/components/ToastContainer"));
+const MainContainer = lazy(() =>
+	import("@/components/MainContainer/MainContainer")
+);
 
 function App() {
-  return (
-		<>
+	return (
+		<Suspense fallback={<Fallback/>}>
 			<Header />
 			<MainContainer>
 				<Hero />
@@ -23,11 +28,12 @@ function App() {
 				<Section sectionName="Join Us" sectionNumber="03">
 					<JoinUs />
 				</Section>
-				<Toast/>
+				<Toast />
 			</MainContainer>
 			<Footer />
-		</>
+		</Suspense>
 	);
 }
 
-export default App
+export default App;
+

@@ -10,11 +10,12 @@ import {
 import asterisk from "@/assets/Pics/asterisk.svg";
 import PhoneInput from "react-phone-number-input";
 import { useFormik } from "formik";
-import { PasswordInput } from "./PasswordInput";
+import PasswordInput from "./PasswordInput";
 import * as Yup from "yup";
 import { toast } from "react-toastify";
+import { PiDesktopFill } from "react-icons/pi";
 
-export const Form = () => {
+function Form () {
 
 	const onSubmit = ({ email, phoneNumber, password, confirmPassword }) => {
 		toast(
@@ -140,3 +141,6 @@ export const Form = () => {
 		</StyledForm>
 	);
 };
+
+
+export default Form;

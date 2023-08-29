@@ -10,7 +10,7 @@ import {
 } from "./FeatureCard.styled";
 import iconArrow from "@/assets/Pics/icon_arrow-up.svg";
 
-export const FeatureCard = ({ image, number, title, description, alt }) => {
+function FeatureCard ({ image, number, title, description, alt }) {
 	return (
 		<Card>
 			<Image src={image} alt={alt} aria-hidden="true" />
@@ -34,3 +34,5 @@ export const FeatureCard = ({ image, number, title, description, alt }) => {
 		</Card>
 	);
 };
+
+export default FeatureCard;
