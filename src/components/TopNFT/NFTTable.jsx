@@ -55,30 +55,30 @@ function NFTTable () {
 						({ nftName, price, rarityLevel, totalGames, gamesWon }, index) => (
 							<TR key={index}>
 								{isMobile && (
-									<DynamicTD label={`${index + 1}. ${nftName}`}>
+									<DynamicTD aria-label={`${index + 1}. ${nftName}`}>
 										<DynamicTDText>{price} ETH</DynamicTDText>
 									</DynamicTD>
 								)}
 
-								<ImageTD>
+								<ImageTD >
 									<Image src={images[index]} alt={nftName} aria-hidden='true' />
 								</ImageTD>
 								{!isMobile && (
-									<TD label="NFT Name">
+									<TD aria-label="NFT Name">
 										<NFTNameText>{nftName}</NFTNameText>
 									</TD>
 								)}
-								<TD label="Rarity:">
+								<TD aria-label="Rarity:">
 									<Text>{rarityLevel}</Text>
 								</TD>
-								<TD label="Total games:">
+								<TD aria-label="Total games:">
 									<Text>{totalGames}</Text>
 								</TD>
-								<TD label="Games Won:">
+								<TD aria-label="Games Won:">
 									<Text>{gamesWon}</Text>
 								</TD>
 								{!isMobile && (
-									<TD label="Price (ETH)">
+									<TD aria-label="Price (ETH)">
 										<Text>{price}</Text>
 									</TD>
 								)}

@@ -70,7 +70,7 @@ export const TD = styled.td`
 	}
 
 	&::before {
-		content: attr(label);
+		content: attr(aria-label);
 		text-align: left;
 		font: var(--font-body-mobile);
 		color: var(--color-light-grey);
