@@ -12,7 +12,7 @@ import {
 	ImageTD,
 	NFTNameText,
 } from "./Table.styled";
-import data from '../../topNFTdata.json';
+import data from './topNFTdata.json';
 import useWindowDimensions from "../../utils/hooks/useWindowDimensions";
 import { useState, useEffect } from 'react';
 import images from '../../assets/Pics/TopNFTPics/topNFTpics'
@@ -61,7 +61,7 @@ export const NFTTable = () => {
 								)}
 
 								<ImageTD>
-									<Image src={images[index]} />
+									<Image src={images[index]} alt={nftName} aria-hidden='true' />
 								</ImageTD>
 								{!isMobile && (
 									<TD label="NFT Name">

@@ -22,8 +22,8 @@ export const Header = () => {
 	return (
 		<StyledHeader>
 			<Container>
-				<LogoIcon src={Logo} />
-				<StyledButtonLink onClick={scrollToElement}>
+				<LogoIcon src={Logo} alt="Logo" aria-label="Logo DX"/>
+				<StyledButtonLink onClick={scrollToElement} aria-label="join now">
 					<ArrowUpIcon src={iconArrow} />
 					<span>join now</span>
 				</StyledButtonLink>

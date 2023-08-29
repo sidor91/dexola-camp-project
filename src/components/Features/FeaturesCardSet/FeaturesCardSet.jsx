@@ -12,6 +12,7 @@ export const FeaturesCardSet = () => {
 						number={number}
 						title={title}
 						description={description}
+						alt={title}
 					/>
 				))}
 			</CardsContainer>

@@ -15,6 +15,7 @@ import * as Yup from "yup";
 import { toast } from "react-toastify";
 
 export const Form = () => {
+
 	const onSubmit = ({ email, phoneNumber, password, confirmPassword }) => {
 		toast(
 			`email: ${email}, phoneNumber: ${phoneNumber}, password: ${password}, confirmPassword: ${confirmPassword}`
@@ -45,7 +46,7 @@ export const Form = () => {
 		confirmPassword: "",
 	};
 
-	const formik = useFormik({
+	var formik = useFormik({
 		initialValues,
 		onSubmit,
 		validationSchema,
@@ -76,6 +77,7 @@ export const Form = () => {
 					onBlur={formik.handleBlur}
 					autoComplete="off"
 					placeholder="Enter email"
+					aria-label="email"
 				/>
 				{touchedEmail && errorsEmail && (
 					<ErrorMessage>{errorsEmail}</ErrorMessage>
@@ -96,6 +98,7 @@ export const Form = () => {
 					withCountryCallingCode={true}
 					limitMaxLength={true}
 					countryCallingCodeEditable={false}
+					aria-label="phone number"
 				/>
 				{touchedPhoneNumber && errorsPhoneNumber && (
 					<ErrorMessage>{errorsPhoneNumber}</ErrorMessage>
@@ -109,6 +112,7 @@ export const Form = () => {
 				onBlur={formik.handleBlur}
 				autoComplete="off"
 				placeholder="Password"
+				aria-label="password"
 				$iserror={touchedPassword && errorsPassword}
 			>
 				{touchedPassword && errorsPassword && (
@@ -124,12 +128,13 @@ export const Form = () => {
 				autoComplete="off"
 				placeholder="Confirm Password"
 				$iserror={touchedConfirmPassword && errorsConfirmPassword}
+				aria-label="confirm password"
 			>
 				{touchedConfirmPassword && errorsConfirmPassword && (
 					<ErrorMessage>{errorsConfirmPassword}</ErrorMessage>
 				)}
 			</PasswordInput>
-			<SubmitButton type="submit">
+			<SubmitButton type="submit" aria-label="Send it">
 				<ButtonText>Send it</ButtonText>
 			</SubmitButton>
 		</StyledForm>

@@ -27,7 +27,7 @@ export const PasswordInput = ({children, $iserror, ...props}) => {
 		<InputContainer $iserror={$iserror}>
 			<IconAsterisk src={asterisk} />
 			<Input {...props} type="password" ref={passwordref} />
-			<IconEyeContainer onClick={togglePassword}>
+			<IconEyeContainer onClick={togglePassword} aria-label="show/hide password">
 				{isPasswordShown ? <IconEye /> : <IconEyeClosed />}
 			</IconEyeContainer>
 			{children}

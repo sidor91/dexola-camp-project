@@ -36,6 +36,7 @@ export const HeroAnimatedImages = () => {
 							opacity: index === currentIndex ? 1 : 0,
 							transition: "opacity 2s ease-in-out",
 						}}
+						aria-hidden="true"
 					/>
 				))}
 			</Container>
@@ -49,6 +50,7 @@ export const HeroAnimatedImages = () => {
 							opacity: index === currentIndex ? 1 : 0,
 							transition: "opacity 2s ease-in-out",
 						}}
+						aria-hidden="true"
 					/>
 				))}
 			</Container>

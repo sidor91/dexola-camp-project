@@ -16,7 +16,7 @@ export const Footer = () => {
 			<Container>
 				<SocialContainer>
 					{icons.map(({ icon, link }, index) => (
-						<a href={link} target="blanc" key={index}>
+						<a href={link} target="blanc" key={index} aria-label={`link to ${link}`}>
 							<Icon src={icon} />
 						</a>
 					))}

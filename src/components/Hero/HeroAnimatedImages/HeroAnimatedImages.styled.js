@@ -14,6 +14,8 @@ export const ImagesContainer = styled.div`
 	}
 
 	@media ${media.minDesktop} {
+		margin-left: initial;
+		margin-right: initial;
 		width: 466px;
 		margin-bottom: 0;
 		height: 311px;

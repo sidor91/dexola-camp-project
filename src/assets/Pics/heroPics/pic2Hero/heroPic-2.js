@@ -1,13 +1,13 @@
-import property2defaultPic from "./Pic1.jpg";
-import property2defaultPic2x from "./Pic1_2x.jpg";
-import property2variant2Pic from "./Pic2.jpg";
-import property2variant2Pic2x from "./Pic2_2x.jpg";
-import property2variant3Pic from "./Pic3.jpg";
-import property2variant3Pic2x from "./Pic3_2x.jpg";
-import property2variant4Pic from "./Pic4.jpg";
-import property2variant4Pic2x from "./Pic4_2x.jpg";
-import property2variant5Pic from "./Pic5.jpg";
-import property2variant5Pic2x from "./Pic5_2x.jpg";
+import property2defaultPic from "./Pic1.webp";
+import property2defaultPic2x from "./Pic1_2x.webp";
+import property2variant2Pic from "./Pic2.webp";
+import property2variant2Pic2x from "./Pic2_2x.webp";
+import property2variant3Pic from "./Pic3.webp";
+import property2variant3Pic2x from "./Pic3_2x.webp";
+import property2variant4Pic from "./Pic4.webp";
+import property2variant4Pic2x from "./Pic4_2x.webp";
+import property2variant5Pic from "./Pic5.webp";
+import property2variant5Pic2x from "./Pic5_2x.webp";
 
 export const heroProperty2 = [
 	property2defaultPic,
