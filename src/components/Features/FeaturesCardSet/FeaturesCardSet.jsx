@@ -1,4 +1,4 @@
-import { FeatureCard } from "../FeatureCard/FeatureCard"
+import { FeatureCard } from "@/components/Features/FeatureCard/FeatureCard"
 import { CardsContainer } from "./FeaturesCardSet.styled";
 import { featuresList } from "./featuresList";
 

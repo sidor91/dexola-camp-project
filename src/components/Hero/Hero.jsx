@@ -1,6 +1,6 @@
 import { StyledHero, StyledParagraph, Container } from "./Hero.styled";
-import { HeroAnimatedImages } from "./HeroAnimatedImages/HeroAnimatedImages";
-import { Marquee } from "./Marquee/Marquee";
+import { HeroAnimatedImages } from "@/components/Hero/HeroAnimatedImages/HeroAnimatedImages";
+import { Marquee } from "@/components/Hero/Marquee/Marquee";
 
 export const Hero = () => {
 	return (

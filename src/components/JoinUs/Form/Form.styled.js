@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { media } from "../../../utils/mediaRules";
+import { media } from "@/utils/mediaRules";
 import { PiEye, PiEyeClosed } from "react-icons/pi";
 
 export const StyledForm = styled.form`

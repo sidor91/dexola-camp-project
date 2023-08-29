@@ -8,7 +8,7 @@ import {
 	StyledButtonLink,
 	StyledIcon,
 } from "./FeatureCard.styled";
-import iconArrow from "../../../assets/Pics/icon_arrow-up.svg";
+import iconArrow from "@/assets/Pics/icon_arrow-up.svg";
 
 export const FeatureCard = ({ image, number, title, description, alt }) => {
 	return (

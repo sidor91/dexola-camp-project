@@ -5,10 +5,10 @@ import {
 	Text,
 	ArrowIcon,
 } from "./JoinUs.styled";
-import useWindowDimensions from '../../utils/hooks/useWindowDimensions';
+import useWindowDimensions from '@/utils/hooks/useWindowDimensions';
 import { useState, useEffect } from "react";
-import { Form } from './Form/Form';
-import iconArrowRight from "../../assets/Pics/icon_arrow-right.svg";
+import { Form } from '@/components/JoinUs/Form/Form';
+import iconArrowRight from "@/assets/Pics/icon_arrow-right.svg";
 
 export const JoinUs = () => {
     const [isDesktop, setIsDesktop] = useState(false);

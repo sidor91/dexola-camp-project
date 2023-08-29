@@ -4,7 +4,7 @@ import {
 	StyledParagraph,
 	Container,
 } from "./Features.styled";
-import { FeaturesCardSet } from "./FeaturesCardSet/FeaturesCardSet";
+import { FeaturesCardSet } from "@/components/Features/FeaturesCardSet/FeaturesCardSet";
 
 
 export const Features = () => {

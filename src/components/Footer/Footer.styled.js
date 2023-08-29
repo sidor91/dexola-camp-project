@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { media } from "../../utils/mediaRules";
-import { Paragraph } from "../SharedElements.styled";
+import { media } from "@/utils/mediaRules";
+import { Paragraph } from "@/components/SharedElements.styled";
 
 export const StyledFooter = styled.footer`
 	min-width: var(--width-mobile);

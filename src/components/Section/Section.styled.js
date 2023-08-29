@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { media } from "../../utils/mediaRules";
-import { H2heading } from "../SharedElements.styled";
+import { media } from "@/utils/mediaRules";
+import { H2heading } from "@/components/SharedElements.styled";
 
 export const StyledSection = styled.section`
 	width: 100%;
@@ -34,8 +34,3 @@ export const StyledSectionHeader = styled(H2heading)`
 		line-height: 1.4;
 	}
 `;
-
-
-
-
-

@@ -7,7 +7,7 @@ import {
 	ButtonText,
 	ErrorMessage,
 } from "./Form.styled";
-import asterisk from "../../../assets/Pics/asterisk.svg";
+import asterisk from "@/assets/Pics/asterisk.svg";
 import PhoneInput from "react-phone-number-input";
 import { useFormik } from "formik";
 import { PasswordInput } from "./PasswordInput";

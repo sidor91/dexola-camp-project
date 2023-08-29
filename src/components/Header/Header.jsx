@@ -5,8 +5,8 @@ import {
 	ArrowUpIcon,
 	Container,
 } from "./Header.styled";
-import Logo from "../../assets/Pics/Logo.svg";
-import iconArrow from "../../assets/Pics/icon_arrow-up.svg";
+import Logo from "@/assets/Pics/Logo.svg";
+import iconArrow from "@/assets/Pics/icon_arrow-up.svg";
 
 export const Header = () => {
 
@@ -23,8 +23,8 @@ export const Header = () => {
 		<StyledHeader>
 			<Container>
 				<LogoIcon src={Logo} alt="Logo" aria-label="Logo DX"/>
-				<StyledButtonLink onClick={scrollToElement} aria-label="join now">
-					<ArrowUpIcon src={iconArrow} />
+				<StyledButtonLink onClick={scrollToElement} aria-label="join now" href="#">
+					<ArrowUpIcon src={iconArrow} alt="arrow up" aria-hidden="true"/>
 					<span>join now</span>
 				</StyledButtonLink>
 			</Container>

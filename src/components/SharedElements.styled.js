@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { media } from "../utils/mediaRules";
+import { media } from "@/utils/mediaRules";
 
 export const H2heading = styled.h2`
 	font: var(--font-title-mobile);

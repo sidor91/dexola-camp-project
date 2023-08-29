@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { media } from "../../utils/mediaRules";
-import { Paragraph, H3heading } from "../SharedElements.styled";
+import { media } from "@/utils/mediaRules";
+import { Paragraph, H3heading } from "@/components/SharedElements.styled";
 
 export const Container = styled.div`
 	width: 100%;
@@ -14,9 +14,9 @@ export const Container = styled.div`
 	}
 
 	@media ${media.minDesktop} {
-        padding-top: 90px;
-        padding-bottom: 125px;
-        flex-direction: row;
+		padding-top: 90px;
+		padding-bottom: 125px;
+		flex-direction: row;
 	}
 `;
 
@@ -34,16 +34,15 @@ export const InformationContainer = styled.div`
 `;
 
 export const Heading = styled(H3heading)`
-margin-bottom: 12px;
+	margin-bottom: 12px;
 
-@media ${media.minDesktop} {
-    margin-bottom: 0;
-}
-`
+	@media ${media.minDesktop} {
+		margin-bottom: 0;
+	}
+`;
 
-export const Text = styled(Paragraph)`
-`
+export const Text = styled(Paragraph)``;
 export const ArrowIcon = styled.img`
-margin-top: 31px;
-width: fit-content;
-`
+	margin-top: 31px;
+	width: fit-content;
+`;

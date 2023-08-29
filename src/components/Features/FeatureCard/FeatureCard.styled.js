@@ -1,6 +1,10 @@
 import styled from "styled-components";
-import { media } from "../../../utils/mediaRules";
-import { H3heading, Paragraph, ButtonLink } from "../../SharedElements.styled";
+import { media } from "@/utils/mediaRules";
+import {
+	H3heading,
+	Paragraph,
+	ButtonLink,
+} from "@/components/SharedElements.styled";
 
 export const Card = styled.li`
 	width: 100%;

@@ -4,8 +4,8 @@ import {
 	StyledImage,
 	Container,
 } from "./HeroAnimatedImages.styled";
-import images1 from "../../../assets/Pics/heroPics/pic1Hero/heroPic-1";
-import images2 from "../../../assets/Pics/heroPics/pic2Hero/heroPic-2";
+import images1 from "@/assets/Pics/heroPics/pic1Hero/heroPic-1";
+import images2 from "@/assets/Pics/heroPics/pic2Hero/heroPic-2";
 
 export const HeroAnimatedImages = () => {
 	const [currentIndex, setCurrentIndex] = useState(0);

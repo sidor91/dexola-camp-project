@@ -1,16 +1,18 @@
 import styled from "styled-components";
-import { media } from "../../../utils/mediaRules";
+import { media } from "@/utils/mediaRules";
 
 export const ImagesContainer = styled.div`
 	display: flex;
 	width: calc(100% - 48px);
+	height: 311px;
 	margin-left: auto;
 	margin-right: auto;
-	min-height: 311px;
 	margin-bottom: 16px;
 
-	@media ${media.minTablet} {
+	@media screen and (min-width: 745px) {
 		margin-bottom: -24px;
+		height: fit-content;
+		min-height: 311px;
 	}
 
 	@media ${media.minDesktop} {
@@ -24,12 +26,17 @@ export const ImagesContainer = styled.div`
 
 export const Container = styled.div`
 	flex: 1;
-	width: 100%;
-	min-height: 311px;
+	width: 50%;
+	height: 100%;
 	box-sizing: border-box;
 	border: 1px solid var(--color-accent-blue);
 	position: relative;
-	padding-bottom: 50%;
+
+	@media screen and (min-width: 745px) {
+		height: fit-content;
+		min-height: 311px;
+		padding-bottom: 50%;
+	}
 
 	@media ${media.minDesktop} {
 		height: 311px;
@@ -46,6 +53,5 @@ export const StyledImage = styled.img`
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	object-position: top;
 `;
-
-

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { media } from "../../utils/mediaRules";
-import { Paragraph, H3heading } from "../SharedElements.styled";
+import { media } from "@/utils/mediaRules";
+import { Paragraph, H3heading } from "@/components/SharedElements.styled";
 
 export const Container = styled.div`
 	width: 100%;

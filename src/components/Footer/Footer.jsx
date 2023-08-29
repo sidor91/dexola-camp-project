@@ -8,7 +8,7 @@ import {
 	DesignedContainer,
 	DesignAndCopyContainer,
 } from "./Footer.styled";
-import { icons } from "../../assets/Pics/footerIcons";
+import { icons } from "@/assets/Pics/footerIcons";
 
 export const Footer = () => {
 	return (

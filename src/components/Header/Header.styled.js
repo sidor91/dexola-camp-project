@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { media } from "../../utils/mediaRules";
-import { ButtonLink } from "../SharedElements.styled";
-
+import { media } from "@/utils/mediaRules";
+import { ButtonLink } from "@/components/SharedElements.styled";
 
 export const StyledHeader = styled.header`
 	min-width: var(--width-mobile);
@@ -54,8 +53,7 @@ export const ArrowUpIcon = styled.img`
 	}
 `;
 
-
 export const LogoIcon = styled.img`
-width: 34.5px;
-height: 19.5px;
-`
+	width: 34.5px;
+	height: 19.5px;
+`;

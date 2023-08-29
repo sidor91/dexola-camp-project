@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { media } from "../../utils/mediaRules";
-import { Paragraph } from "../SharedElements.styled";
+import { media } from "@/utils/mediaRules";
+import { Paragraph } from "@/components/SharedElements.styled";
 
 export const StyledHero = styled.section`
 	width: 100%;
@@ -22,7 +22,6 @@ export const Container = styled.div`
 	flex-direction: column;
 	margin-left: auto;
 	margin-right: auto;
-	
 
 	@media ${media.minDesktop} {
 		padding: 0 120px;

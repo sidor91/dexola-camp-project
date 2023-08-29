@@ -6,7 +6,7 @@ import {
 	IconEyeClosed,
 	IconEyeContainer,
 } from "./Form.styled";
-import asterisk from "../../../assets/Pics/asterisk.svg";
+import asterisk from "@/assets/Pics/asterisk.svg";
 import { useState, useRef } from "react";
 import "./phoneInput.css";
 

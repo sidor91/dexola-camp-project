@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { media } from "../../utils/mediaRules";
-import { H3heading, Paragraph } from "../SharedElements.styled"; 
+import { media } from "@/utils/mediaRules";
+import { H3heading, Paragraph } from "@/components/SharedElements.styled";
 
 export const Container = styled.div`
 	width: 100%;
@@ -16,8 +16,6 @@ export const Container = styled.div`
 		padding-bottom: 191px;
 	}
 `;
-
-
 
 export const InformationContainer = styled.div`
 	margin-bottom: 24px;
@@ -61,7 +59,3 @@ export const StyledParagraph = styled(Paragraph)`
 		margin-top: 6px;
 	}
 `;
-
-
-
-

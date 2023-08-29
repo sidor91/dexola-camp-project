@@ -1,4 +1,4 @@
-import images from "../../../assets/Pics/featuresPics/featurePics";
+import images from "@/assets/Pics/featuresPics/featurePics";
 
 export const featuresList = [
 	{

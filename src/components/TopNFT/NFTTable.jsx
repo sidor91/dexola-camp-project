@@ -13,9 +13,9 @@ import {
 	NFTNameText,
 } from "./Table.styled";
 import data from './topNFTdata.json';
-import useWindowDimensions from "../../utils/hooks/useWindowDimensions";
+import useWindowDimensions from "@/utils/hooks/useWindowDimensions";
 import { useState, useEffect } from 'react';
-import images from '../../assets/Pics/TopNFTPics/topNFTpics'
+import images from '@/assets/Pics/TopNFTPics/topNFTpics'
 
 export const NFTTable = () => {
     const dimensions = useWindowDimensions();
