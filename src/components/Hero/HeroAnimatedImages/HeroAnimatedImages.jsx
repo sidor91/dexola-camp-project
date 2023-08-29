@@ -24,6 +24,14 @@ function HeroAnimatedImages () {
 		};
 	}, [currentIndex]);
 
+	const defineDisplay = (index, currentIndex) => {
+		if (index === currentIndex || index === currentIndex + 1 || index === currentIndex - 1) {
+			return "block";
+		} else if (index === 4 && currentIndex === 0) { return "block " } else {
+			return "none"
+		}
+	}
+
 	return (
 		<ImagesContainer>
 			<Container>
@@ -33,6 +41,9 @@ function HeroAnimatedImages () {
 						src={image}
 						alt={`Image ${index + 1}`}
 						style={{
+							display: `${() => {
+								defineDisplay(index, currentIndex);
+							}}`,
 							opacity: index === currentIndex ? 1 : 0,
 							transition: "opacity 2s ease-in-out",
 						}}
@@ -47,6 +58,9 @@ function HeroAnimatedImages () {
 						src={image}
 						alt={`Image ${index + 1}`}
 						style={{
+							display: `${() => {
+								defineDisplay(index, currentIndex);
+							}}`,
 							opacity: index === currentIndex ? 1 : 0,
 							transition: "opacity 2s ease-in-out",
 						}}
