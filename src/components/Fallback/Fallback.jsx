@@ -8,11 +8,12 @@ function Fallback() {
 				height="80"
 				width="80"
 				radius="9"
-				color="#060412"
+				color="#ffffff"
 				ariaLabel="three-dots-loading"
+				wrapperStyle={{}}
+				wrapperClassName=""
 				visible={true}
 			/>
-			;
 		</Container>
 	);
 }

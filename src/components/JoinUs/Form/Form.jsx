@@ -69,7 +69,7 @@ function Form () {
 	return (
 		<StyledForm onSubmit={formik.handleSubmit} id="joinus">
 			<InputContainer $iserror={touchedEmail && errorsEmail}>
-				<IconAsterisk src={asterisk} />
+				<IconAsterisk src={asterisk} alt="asterisk" aria-hidden="true"/>
 				<Input
 					id="email"
 					name="email"

@@ -22,12 +22,11 @@ function FeatureCard ({ image, number, title, description, alt }) {
 				<CardDescriptionParagraph>{description}</CardDescriptionParagraph>
 
 				<StyledButtonLink
-					$icon={iconArrow}
 					href="https://dexola.com/"
 					target="blanc"
 					aria-label="discover more"
 				>
-					<StyledIcon src={iconArrow} />
+					<StyledIcon src={iconArrow} alt="arrowArrow" aria-hidden="true" />
 					<span>discover more</span>
 				</StyledButtonLink>
 			</CardDescriptionContainer>
