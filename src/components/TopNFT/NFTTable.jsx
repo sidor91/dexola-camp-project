@@ -31,7 +31,7 @@ function NFTTable () {
 				{!isMobile && (
 					<thead>
 						<TR style={{ backgroundColor: "inherit" }}>
-							<TH></TH>
+							<TH aria-label="nft photo"></TH>
 							<TH>
 								<Title>NFT Name</Title>
 							</TH>
@@ -60,8 +60,12 @@ function NFTTable () {
 									</DynamicTD>
 								)}
 
-								<ImageTD >
-									<Image src={images[index]} alt={nftName} aria-hidden='true' />
+								<ImageTD aria-label="nft photo">
+									<Image
+										src={images[index]}
+										alt={nftName}
+										aria-label={`${nftName} photo`}
+									/>
 								</ImageTD>
 								{!isMobile && (
 									<TD aria-label="NFT Name">
