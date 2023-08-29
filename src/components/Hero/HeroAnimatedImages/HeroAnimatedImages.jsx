@@ -7,7 +7,7 @@ import {
 import images1 from "@/assets/Pics/heroPics/pic1Hero/heroPic-1";
 import images2 from "@/assets/Pics/heroPics/pic2Hero/heroPic-2";
 
-function HeroAnimatedImages () {
+function HeroAnimatedImages() {
 	const [currentIndex, setCurrentIndex] = useState(0);
 
 	useEffect(() => {
@@ -25,12 +25,18 @@ function HeroAnimatedImages () {
 	}, [currentIndex]);
 
 	const defineDisplay = (index, currentIndex) => {
-		if (index === currentIndex || index === currentIndex + 1 || index === currentIndex - 1) {
+		if (
+			index === currentIndex ||
+			index === currentIndex + 1 ||
+			index === currentIndex - 1
+		) {
 			return "block";
-		} else if (index === 4 && currentIndex === 0) { return "block " } else {
-			return "none"
+		} else if (index === 4 && currentIndex === 0) {
+			return "block ";
+		} else {
+			return "none";
 		}
-	}
+	};
 
 	return (
 		<ImagesContainer>
@@ -41,9 +47,7 @@ function HeroAnimatedImages () {
 						src={image}
 						alt={`Image ${index + 1}`}
 						style={{
-							display: `${() => {
-								defineDisplay(index, currentIndex);
-							}}`,
+							display: `${defineDisplay(index, currentIndex)}`,
 							opacity: index === currentIndex ? 1 : 0,
 							transition: "opacity 2s ease-in-out",
 						}}
@@ -58,9 +62,7 @@ function HeroAnimatedImages () {
 						src={image}
 						alt={`Image ${index + 1}`}
 						style={{
-							display: `${() => {
-								defineDisplay(index, currentIndex);
-							}}`,
+							display: `${defineDisplay(index, currentIndex)}`,
 							opacity: index === currentIndex ? 1 : 0,
 							transition: "opacity 2s ease-in-out",
 						}}
@@ -70,6 +72,6 @@ function HeroAnimatedImages () {
 			</Container>
 		</ImagesContainer>
 	);
-};
+}
 
 export default HeroAnimatedImages;
