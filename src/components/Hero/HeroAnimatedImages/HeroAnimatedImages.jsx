@@ -32,6 +32,8 @@ function HeroAnimatedImages() {
 		) {
 			return "block";
 		} else if (index === 4 && currentIndex === 0) {
+			return "block";
+		} else if (index === 0 && currentIndex === 4) {
 			return "block ";
 		} else {
 			return "none";
