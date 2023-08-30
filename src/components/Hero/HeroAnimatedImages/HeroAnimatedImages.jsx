@@ -53,7 +53,7 @@ function HeroAnimatedImages() {
 							key={index}
 							src={lowRes}
 							srcSet={`${lowRes} 1x, ${highRes} 2x`}
-							loading={index === currentIndex ? "eager" : "lazy"}
+							loading="lazy"
 							alt={`Image ${index + 1}`}
 							style={{
 								opacity: index === currentIndex ? 1 : 0,
@@ -70,7 +70,7 @@ function HeroAnimatedImages() {
 							key={index}
 							src={lowRes}
 							srcSet={`${lowRes} 1x, ${highRes} 2x`}
-							loading={index === currentIndex ? "eager" : "lazy"}
+							loading="lazy"
 							alt={`Image ${index + 1}`}
 							style={{
 								opacity: index === currentIndex ? 1 : 0,

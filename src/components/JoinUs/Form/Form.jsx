@@ -98,7 +98,6 @@ function Form () {
 					international={true}
 					withCountryCallingCode={true}
 					limitMaxLength={true}
-					countryCallingCodeEditable={false}
 					aria-label="phone number"
 				/>
 				{touchedPhoneNumber && errorsPhoneNumber && (

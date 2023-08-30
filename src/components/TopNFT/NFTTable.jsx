@@ -65,6 +65,7 @@ function NFTTable () {
 										src={images[index]}
 										alt={nftName}
 										aria-label={`${nftName} photo`}
+										loading="lazy"
 									/>
 								</ImageTD>
 								{!isMobile && (

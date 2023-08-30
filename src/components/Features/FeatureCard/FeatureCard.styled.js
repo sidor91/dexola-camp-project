@@ -25,17 +25,28 @@ export const Card = styled.li`
 	}
 `;
 
-export const Image = styled.img`
+export const ImageContainer = styled.div`
 	width: 100%;
-	height: auto;
-	object-fit: cover;
+	min-height: 232px;
 
 	@media ${media.minTablet} {
+		min-height: unset;
 		height: 240px;
 	}
 
 	@media ${media.minDesktop} {
 		height: 307px;
+	}
+`;
+
+export const Image = styled.img`
+	width: 100%;
+	height: 100%;
+	min-height: 232px;
+	object-fit: cover;
+
+	@media ${media.minTablet} {
+		min-height: unset;
 	}
 `;
 

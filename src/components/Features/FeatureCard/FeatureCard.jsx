@@ -1,5 +1,6 @@
 import {
 	Card,
+	ImageContainer,
 	Image,
 	CardDescriptionContainer,
 	CardDescriptionHeading,
@@ -13,7 +14,9 @@ import iconArrow from "@/assets/Pics/icon_arrow-up.svg";
 function FeatureCard ({ image, number, title, description, alt }) {
 	return (
 		<Card>
-			<Image src={image} alt={alt} aria-hidden="true" loading="lazy"/>
+			<ImageContainer>
+				<Image src={image} alt={alt} aria-hidden="true" loading="lazy" />
+			</ImageContainer>
 			<CardDescriptionContainer>
 				<CardDescriptionHeading>
 					<CardNumber>{number}</CardNumber>

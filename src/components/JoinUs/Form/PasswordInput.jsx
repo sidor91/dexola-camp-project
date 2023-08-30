@@ -27,11 +27,12 @@ function PasswordInput ({children, $iserror, ...props}) {
 		<InputContainer $iserror={$iserror}>
 			<IconAsterisk src={asterisk} alt="asterisk" aria-hidden="true" />
 			<Input {...props} type="password" ref={passwordref} />
-			<IconEyeContainer
-				onClick={togglePassword}
-				aria-label="show/hide password"
-			>
-				{isPasswordShown ? <IconEye /> : <IconEyeClosed />}
+			<IconEyeContainer onClick={togglePassword}>
+				{isPasswordShown ? (
+					<IconEye aria-label="password shown" />
+				) : (
+					<IconEyeClosed aria-label="password hidden" />
+				)}
 			</IconEyeContainer>
 			{children}
 		</InputContainer>
