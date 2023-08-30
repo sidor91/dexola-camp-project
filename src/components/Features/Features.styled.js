@@ -23,12 +23,10 @@ export const InformationContainer = styled.div`
 	@media ${media.minTablet} {
 		margin-bottom: 40px;
 		display: flex;
-		justify-content: center;
 	}
 
 	@media ${media.minDesktop} {
 		margin-bottom: 90px;
-		justify-content: unset;
 	}
 `;
 
@@ -36,6 +34,7 @@ export const Heading = styled(H3heading)`
 	margin-bottom: 12px;
 
 	@media ${media.minTablet} {
+		white-space: nowrap;
 		margin-bottom: auto;
 		margin-right: 72px;
 	}
@@ -49,10 +48,6 @@ export const Heading = styled(H3heading)`
 export const StyledParagraph = styled(Paragraph)`
 	display: block;
 	width: 100%;
-
-	@media ${media.minTablet} {
-		width: 460px;
-	}
 
 	@media ${media.minDesktop} {
 		width: 601px;

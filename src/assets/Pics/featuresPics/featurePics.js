@@ -5,17 +5,11 @@ import pic2_2x from "./Pic2_2x.webp";
 import pic3 from "./Pic3.webp";
 import pic3_2x from "./Pic3_2x.webp";
 
-const nonRetinaPics = [pic1, pic2, pic3];
-const retinaPics = [pic1_2x, pic2_2x, pic3_2x];
 
-let images;
-
-const { devicePixelRatio } = window;
-
-if (devicePixelRatio === 1) {
-	images = nonRetinaPics;
-} else {
-	images = retinaPics;
-}
+const images = [
+	{ lowRes: pic1, highRes: pic1_2x },
+	{ lowRes: pic2, highRes: pic2_2x },
+	{ lowRes: pic3, highRes: pic3_2x },
+];
 
 export default images;

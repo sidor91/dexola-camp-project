@@ -15,7 +15,13 @@ function FeatureCard ({ image, number, title, description, alt }) {
 	return (
 		<Card>
 			<ImageContainer>
-				<Image src={image} alt={alt} aria-hidden="true" loading="lazy" />
+				<Image
+					src={image.lowRes}
+					srcSet={`${image.lowRes} 1x, ${image.highRes} 2x`}
+					alt={alt}
+					aria-hidden="true"
+					loading="lazy"
+				/>
 			</ImageContainer>
 			<CardDescriptionContainer>
 				<CardDescriptionHeading>

@@ -1,3 +1,31 @@
+/* Roboto Mono 400 */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-weight: 400;
+  src: url('@/utils/fonts/Roboto_Mono/static/RobotoMono-Regular.ttf') format('truetype');
+}
+
+/* Roboto Mono 500 */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-weight: 500;
+  src: url('@/utils/fonts/Roboto_Mono/static/RobotoMono-Medium.ttf') format('truetype');
+}
+
+/* Kanit 400 */
+@font-face {
+  font-family: 'Kanit';
+  font-weight: 400;
+  src: url('@/utils/fonts/Kanit/Kanit-Regular.ttf') format('truetype');
+}
+
+/* Kanit 500 */
+@font-face {
+  font-family: 'Kanit';
+  font-weight: 500;
+  src: url('@/utils/fonts/Kanit/Kanit-Medium.ttf') format('truetype');
+}
+
 :root {
 	--font-title-web: normal 400 140px/1 "Kanit";
 	--font-title-tablet: normal 400 112px/1 "Kanit";
@@ -30,6 +58,9 @@
 	--width-web: 1440px;
 
 }
+
+
+
 
 body {
 	min-width: 100vw;
