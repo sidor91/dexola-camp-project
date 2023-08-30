@@ -1,38 +1,38 @@
-import property2defaultPic from "./Pic1.webp";
-import property2defaultPic2x from "./Pic1_2x.webp";
-import property2variant2Pic from "./Pic2.webp";
-import property2variant2Pic2x from "./Pic2_2x.webp";
-import property2variant3Pic from "./Pic3.webp";
-import property2variant3Pic2x from "./Pic3_2x.webp";
-import property2variant4Pic from "./Pic4.webp";
-import property2variant4Pic2x from "./Pic4_2x.webp";
-import property2variant5Pic from "./Pic5.webp";
-import property2variant5Pic2x from "./Pic5_2x.webp";
+import Pic1 from "./Pic1.webp";
+import Pic1_2x from "./Pic1_2x.webp";
+import Pic2 from "./Pic2.webp";
+import Pic2_2x from "./Pic2_2x.webp";
+import Pic3 from "./Pic3.webp";
+import Pic3_2x from "./Pic3_2x.webp";
+import Pic4 from "./Pic4.webp";
+import Pic4_2x from "./Pic4_2x.webp";
+import Pic5 from "./Pic5.webp";
+import Pic5_2x from "./Pic5_2x.webp";
 
-export const heroProperty2 = [
-	property2defaultPic,
-	property2variant2Pic,
-	property2variant3Pic,
-	property2variant4Pic,
-	property2variant5Pic,
+import mobilePic1 from "./mobilePics2/Pic1Mobile.webp";
+import mobilePic1_2x from "./mobilePics2/Pic1Mobile_2x.webp";
+import mobilePic2 from "./mobilePics2/Pic2Mobile.webp";
+import mobilePic2_2x from "./mobilePics2/Pic2Mobile_2x.webp";
+import mobilePic3 from "./mobilePics2/Pic3Mobile.webp";
+import mobilePic3_2x from "./mobilePics2/Pic3Mobile_2x.webp";
+import mobilePic4 from "./mobilePics2/Pic4Mobile.webp";
+import mobilePic4_2x from "./mobilePics2/Pic4Mobile_2x.webp";
+import mobilePic5 from "./mobilePics2/Pic5Mobile.webp";
+import mobilePic5_2x from "./mobilePics2/Pic5Mobile_2x.webp";
+
+export const heroProperty2Mobile = [
+	 { lowRes: mobilePic1, highRes: mobilePic1_2x } ,
+	 { lowRes: mobilePic2, highRes: mobilePic2_2x } ,
+	 { lowRes: mobilePic3, highRes: mobilePic3_2x } ,
+	 { lowRes: mobilePic4, highRes: mobilePic4_2x } ,
+	 { lowRes: mobilePic5, highRes: mobilePic5_2x } ,
 ];
 
-export const heroProperty2_2x = [
-	property2defaultPic2x,
-	property2variant2Pic2x,
-	property2variant3Pic2x,
-	property2variant4Pic2x,
-	property2variant5Pic2x,
+export const heroProperty2Desktop = [
+	 { lowRes: Pic1, highRes: Pic1_2x } ,
+	 { lowRes: Pic2, highRes: Pic2_2x } ,
+	 { lowRes: Pic3, highRes: Pic3_2x } ,
+	 { lowRes: Pic4, highRes: Pic4_2x } ,
+	 { lowRes: Pic5, highRes: Pic5_2x } ,
 ];
 
-let images2;
-
-const { devicePixelRatio } = window;
-
-if (devicePixelRatio === 1) {
-	images2 = heroProperty2;
-} else {
-	images2 = heroProperty2_2x;
-}
-
-export default images2;
