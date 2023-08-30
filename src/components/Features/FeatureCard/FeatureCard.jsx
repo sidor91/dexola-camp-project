@@ -13,7 +13,7 @@ import iconArrow from "@/assets/Pics/icon_arrow-up.svg";
 function FeatureCard ({ image, number, title, description, alt }) {
 	return (
 		<Card>
-			<Image src={image} alt={alt} aria-hidden="true" />
+			<Image src={image} alt={alt} aria-hidden="true" loading="lazy"/>
 			<CardDescriptionContainer>
 				<CardDescriptionHeading>
 					<CardNumber>{number}</CardNumber>

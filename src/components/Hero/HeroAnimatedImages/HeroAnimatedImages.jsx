@@ -48,12 +48,12 @@ function HeroAnimatedImages() {
 		<ImagesContainer>
 			<Container>
 				{images1 &&
-					images1.map(({lowRes, highRes}, index) => (
+					images1.map(({ lowRes, highRes }, index) => (
 						<StyledImage
 							key={index}
 							src={lowRes}
 							srcSet={`${lowRes} 1x, ${highRes} 2x`}
-							loading="lazy"
+							loading={index === currentIndex ? "eager" : "lazy"}
 							alt={`Image ${index + 1}`}
 							style={{
 								opacity: index === currentIndex ? 1 : 0,
@@ -65,12 +65,12 @@ function HeroAnimatedImages() {
 			</Container>
 			<Container>
 				{images2 &&
-					images2.map(({lowRes, highRes}, index) => (
+					images2.map(({ lowRes, highRes }, index) => (
 						<StyledImage
 							key={index}
 							src={lowRes}
 							srcSet={`${lowRes} 1x, ${highRes} 2x`}
-							loading="lazy"
+							loading={index === currentIndex ? "eager" : "lazy"}
 							alt={`Image ${index + 1}`}
 							style={{
 								opacity: index === currentIndex ? 1 : 0,
