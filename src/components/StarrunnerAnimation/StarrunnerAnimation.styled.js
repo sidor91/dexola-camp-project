@@ -13,6 +13,8 @@ export const Section = styled.section`
 	position: relative;
 	overflow: hidden;
 	background-image: url("src/assets/Pics/StarRunnerBackground.png");
+	background-position: center;
+	backdrop-filter: blur(36.5px);
 `;
 
 const textOpacityAnimation = keyframes`
