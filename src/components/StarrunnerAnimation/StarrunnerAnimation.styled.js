@@ -12,7 +12,7 @@ export const Section = styled.section`
 	align-items: center;
 	position: relative;
 	overflow: hidden;
-	background-image: url("src/assets/Pics/StarRunnerBackground.png");
+	background-image: url("@/assets/Pics/StarRunnerBackground.png");
 	background-position: center;
 	backdrop-filter: blur(36.5px);
 `;
