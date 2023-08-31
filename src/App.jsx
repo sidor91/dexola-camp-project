@@ -1,5 +1,7 @@
 import { Suspense, lazy } from "react";
-import Fallback from '@/components/Fallback/Fallback'
+import Fallback from "@/components/Fallback/Fallback";
+import useWindowDimensions from "@/utils/hooks/useWindowDimensions";
+import { useState, useEffect } from "react";
 
 const Header = lazy(() => import("@/components/Header/Header"));
 const Section = lazy(() => import("@/components/Section/Section"));
@@ -12,13 +14,28 @@ const Toast = lazy(() => import("@/components/ToastContainer"));
 const MainContainer = lazy(() =>
 	import("@/components/MainContainer/MainContainer")
 );
+const StarRunner = lazy(() =>
+	import("@/components/StarrunnerAnimation/StarrunnerAnimation")
+);
 
 function App() {
+	const dimensions = useWindowDimensions();
+	const [isStarRunnerShown, setIsStarRunnerShown] = useState(false);
+
+	useEffect(() => {
+		if (dimensions >= 1440) {
+			setIsStarRunnerShown(true);
+		} else {
+			setIsStarRunnerShown(false);
+		}
+	}, [dimensions]);
+
 	return (
-		<Suspense fallback={<Fallback/>}>
+		<Suspense fallback={<Fallback />}>
 			<Header />
 			<MainContainer>
 				<Hero />
+				{isStarRunnerShown && <StarRunner />}
 				<Section sectionName="Features" sectionNumber="01">
 					<Features />
 				</Section>
@@ -36,4 +53,3 @@ function App() {
 }
 
 export default App;
-

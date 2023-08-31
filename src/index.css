@@ -2,24 +2,42 @@
   font-family: 'Roboto Mono';
   font-weight: 400;
   src: url('@/utils/fonts/Roboto_Mono/static/RobotoMono-Regular.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Roboto Mono';
   font-weight: 500;
   src: url('@/utils/fonts/Roboto_Mono/static/RobotoMono-Medium.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Kanit';
   font-weight: 400;
   src: url('@/utils/fonts/Kanit/Kanit-Regular.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Kanit';
   font-weight: 500;
   src: url('@/utils/fonts/Kanit/Kanit-Medium.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+	font-family: "Swis721 BT";
+	font-weight: 400;
+	src: url("@/utils/fonts/Swiss/Swiss-721-BT.ttf");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Swis721 Md BT";
+	font-weight: 400;
+	src: url("@/utils/fonts/Swiss/Swiss-721-Medium BT.ttf");
+	font-display: swap;
 }
 
 :root {
@@ -38,6 +56,8 @@
 	--font-button-link-web-tablet: normal 500 16px/1.5 "Roboto Mono";
 	--font-button-link-mobile: normal 500 14px/1.7 "Roboto Mono";
 	--font-form-error-message: normal 500 13px/1.85 "Roboto Mono";
+	--font-additional-animation-subheading: normal 400 24px/1.4 "Swis721 BT";
+	--font-additional-animation-heading: normal 400 64px/1.25 "Swis721 Md BT";
 
 	--color-white: #fff;
 	--color-black: #000;
