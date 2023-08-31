@@ -1,5 +1,6 @@
 import styled, { keyframes, css } from "styled-components";
 import { H3heading, H2heading } from "@/components/SharedElements.styled";
+import background from "./StarRunnerBackground.png";
 
 export const Section = styled.section`
 	width: 100%;
@@ -12,7 +13,7 @@ export const Section = styled.section`
 	align-items: center;
 	position: relative;
 	overflow: hidden;
-	background-image: url("@/assets/Pics/StarRunnerBackground.png");
+	background-image: url(${background});
 	background-position: center;
 	backdrop-filter: blur(36.5px);
 `;
