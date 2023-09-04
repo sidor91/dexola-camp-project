@@ -13,7 +13,6 @@ import { useFormik } from "formik";
 import PasswordInput from "./PasswordInput";
 import * as Yup from "yup";
 import { toast } from "react-toastify";
-import { PiDesktopFill } from "react-icons/pi";
 
 function Form () {
 
@@ -139,7 +138,7 @@ function Form () {
 			</SubmitButton>
 		</StyledForm>
 	);
-};
+}
 
 
 export default Form;

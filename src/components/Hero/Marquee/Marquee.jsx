@@ -6,6 +6,6 @@ function Marquee () {
 			<MarqueeText>dexola camp</MarqueeText>
 		</MarqueeContainer>
 	);
-};
+}
 
 export default Marquee;

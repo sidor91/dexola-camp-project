@@ -8,7 +8,7 @@ import {
 	ArrowDiv1,
 	ArrowDiv2,
 	ArrowDiv3,
-} from "./StarrunnerAnimation.styled";
+} from "@/components/StarRunnerAnimation/StarRunnerAnimation.styled";
 import { useState, useEffect, useRef } from "react";
 
 function StarRunnerAnimation() {
@@ -16,22 +16,21 @@ function StarRunnerAnimation() {
 	const [rippleAreaOffset, setRippleAreaOffset] = useState(null);
 	const rippleAreaRef = useRef(null);
 
-	const checkScroll = () => {
-		if (window.scrollY > rippleAreaOffset) {
-			setAnimationActive(true);
-		}
-	};
-
 	useEffect(() => {
+		const checkScroll = () => {
+			if (window.scrollY > rippleAreaOffset) {
+				setAnimationActive(true);
+			}
+		};
+
 		if (rippleAreaRef.current) {
 			setRippleAreaOffset(rippleAreaRef.current.offsetTop - window.innerHeight);
-			
 		}
 		window.addEventListener("scroll", checkScroll);
 		return () => {
 			window.removeEventListener("scroll", checkScroll);
 		};
-	}, []);
+	}, [rippleAreaOffset]);
 
 	return (
 		<Section ref={rippleAreaRef}>

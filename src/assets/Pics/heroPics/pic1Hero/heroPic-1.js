@@ -21,18 +21,17 @@ import mobilePic5 from "./mobilePics1/Pic5Mobile.webp";
 import mobilePic5_2x from "./mobilePics1/Pic5Mobile_2x.webp";
 
 export const heroProperty1Mobile = [
-	 { lowRes: mobilePic1, highRes: mobilePic1_2x } ,
-	 { lowRes: mobilePic2,  highRes: mobilePic2_2x } ,
-	 { lowRes: mobilePic3,  highRes: mobilePic3_2x } ,
-	 { lowRes: mobilePic4,  highRes: mobilePic4_2x } ,
-	 { lowRes: mobilePic5,  highRes: mobilePic5_2x } ,
+	{ lowRes: mobilePic1, highRes: mobilePic1_2x },
+	{ lowRes: mobilePic2, highRes: mobilePic2_2x },
+	{ lowRes: mobilePic3, highRes: mobilePic3_2x },
+	{ lowRes: mobilePic4, highRes: mobilePic4_2x },
+	{ lowRes: mobilePic5, highRes: mobilePic5_2x },
 ];
 
 export const heroProperty1Desktop = [
-	 { lowRes: Pic1, highRes: Pic1_2x } ,
-	 { lowRes: Pic2, highRes: Pic2_2x } ,
-	 { lowRes: Pic3, highRes: Pic3_2x } ,
-	 { lowRes: Pic4, highRes: Pic4_2x } ,
-	 { lowRes: Pic5, highRes: Pic5_2x } ,
+	{ lowRes: Pic1, highRes: Pic1_2x },
+	{ lowRes: Pic2, highRes: Pic2_2x },
+	{ lowRes: Pic3, highRes: Pic3_2x },
+	{ lowRes: Pic4, highRes: Pic4_2x },
+	{ lowRes: Pic5, highRes: Pic5_2x },
 ];
-

@@ -9,6 +9,7 @@ import {
 import asterisk from "@/assets/Pics/asterisk.svg";
 import { useState, useRef } from "react";
 import "./phoneInput.css";
+import PropTypes from "prop-types";
 
 function PasswordInput ({children, $iserror, ...props}) {
     const [isPasswordShown, setIsPasswordShown] = useState(false);
@@ -37,6 +38,11 @@ function PasswordInput ({children, $iserror, ...props}) {
 			{children}
 		</InputContainer>
 	);
-};
+}
 
 export default PasswordInput;
+
+PasswordInput.propTypes = {
+	children: PropTypes.element,
+	$iserror: PropTypes.bool,
+};

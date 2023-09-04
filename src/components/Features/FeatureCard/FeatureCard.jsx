@@ -10,15 +10,16 @@ import {
 	StyledIcon,
 } from "./FeatureCard.styled";
 import iconArrow from "@/assets/Pics/icon_arrow-up.svg";
+import PropTypes from "prop-types";
 
-function FeatureCard ({ image, number, title, description, alt }) {
+function FeatureCard ({ image, number, title, description }) {
 	return (
 		<Card>
 			<ImageContainer>
 				<Image
 					src={image.lowRes}
 					srcSet={`${image.lowRes} 1x, ${image.highRes} 2x`}
-					alt={alt}
+					alt={title}
 					aria-hidden="true"
 					loading="lazy"
 				/>
@@ -41,6 +42,16 @@ function FeatureCard ({ image, number, title, description, alt }) {
 			</CardDescriptionContainer>
 		</Card>
 	);
-};
+}
 
 export default FeatureCard;
+
+FeatureCard.propTypes = {
+	image: PropTypes.shape({
+		lowRes: PropTypes.string.isRequired,
+		highRes: PropTypes.string.isRequired,
+	}),
+	number: PropTypes.string.isRequired,
+	title: PropTypes.string.isRequired,
+	description: PropTypes.string.isRequired,
+};

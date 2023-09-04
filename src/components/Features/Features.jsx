@@ -13,14 +13,14 @@ function Features () {
 			<InformationContainer>
 				<Heading>About StarRunner</Heading>
 				<StyledParagraph>
-					The StarRunner Blockchain Ecosystem isn't a mere playground; it's a
+					{`The StarRunner Blockchain Ecosystem isn't a mere playground; it's a
 					living, evolving entity that adapts to the desires and creativity of
-					its players.
+					its players.`}
 				</StyledParagraph>
 			</InformationContainer>
 			<FeaturesCardSet />
 		</Container>
 	);
-};
+}
 
 export default Features;

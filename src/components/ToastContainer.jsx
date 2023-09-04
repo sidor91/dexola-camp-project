@@ -16,6 +16,6 @@ function Toast () {
 			theme="light"
 		/>
 	);
-};
+}
 
 export default Toast;

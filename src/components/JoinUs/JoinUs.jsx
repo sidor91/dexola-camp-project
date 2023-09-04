@@ -27,15 +27,15 @@ function JoinUs () {
 			<InformationContainer>
 				<Heading>Experience the Power of StarRunner</Heading>
 				<Text>
-					Join Our Community and Embark on a Journey of Opportunities. Discover
+					{`Join Our Community and Embark on a Journey of Opportunities. Discover
 					the full range of our services that cater to your needs. We've got
-					you covered with top-notch solutions.
+					you covered with top-notch solutions.`}
                 </Text>
                 {isDesktop && <ArrowIcon src={iconArrowRight} />}
             </InformationContainer>
             <Form/>
 		</Container>
 	);
-};
+}
 
 export default JoinUs;

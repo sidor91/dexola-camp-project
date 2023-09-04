@@ -20,6 +20,6 @@ export const featuresList = [
 		number: "03",
 		title: "NFT minting",
 		description:
-			"Every StarRunner NFT tells a story – YOUR story. This NFT encapsulates the essence of your journey.",
+			"Every StarRunner NFT tells a story - YOUR story. This NFT encapsulates the essence of your journey.",
 	},
 ];

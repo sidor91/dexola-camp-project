@@ -37,6 +37,6 @@ function Footer () {
 			</Container>
 		</StyledFooter>
 	);
-};
+}
 
 export default Footer;
