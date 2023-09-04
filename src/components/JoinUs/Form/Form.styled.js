@@ -89,6 +89,10 @@ export const InputContainer = styled.div`
 	&:focus-within {
 		border-bottom-color: var(--color-accent-blue);
 	}
+
+	&:hover {
+		border-bottom-color: var(--color-accent-blue);
+	}
 `;
 
 export const IconAsterisk = styled.img`
@@ -115,6 +119,7 @@ export const IconEyeContainer = styled.div`
 	right: 0;
 	width: 24px;
 	height: 24px;
+	cursor: pointer;
 `;
 
 export const ButtonText = styled.span`

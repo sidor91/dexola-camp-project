@@ -31,7 +31,7 @@ function App() {
 	}, [dimensions]);
 
 	return (
-		<Suspense fallback={<Fallback />}>
+		<Suspense fallback={<Fallback/>}>
 			<Header />
 			<MainContainer>
 				<Hero />
