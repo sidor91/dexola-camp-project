@@ -4,10 +4,13 @@ function useImagePreLoad (images) {
 	const [isLoaded, setIsLoaded] = useState(false);
 
 	useEffect(() => {
-		const loadImage = (src) => {
+		const loadImage = async (src) => {
 			try {
 				const img = new Image();
-				img.src = src;
+                img.src = src;
+                if (img) {
+                    await img.decode();
+                }
 			} catch (error) {
 				console.error("Image load error:", error);
 			}
