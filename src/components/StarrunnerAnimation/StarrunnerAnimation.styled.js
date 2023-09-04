@@ -82,7 +82,7 @@ const rippleAnimationVertical = keyframes`
 export const RippleEllipse = styled.div`
 	border-radius: 50%;
 	border: 6px solid var(--color-accent-blue);
-	box-shadow: inset 0 0 20px var(--color-accent-blue);
+	/* box-shadow: inset 0 0 20px var(--color-accent-blue); */
 	position: absolute;
 
 	&:nth-child(2) {
