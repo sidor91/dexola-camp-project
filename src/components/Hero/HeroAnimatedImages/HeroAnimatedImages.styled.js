@@ -57,17 +57,17 @@ export const StyledImage = styled.img`
 	object-position: top;
 `;
 
-export const ImageLoader = styled(ThreeDots)`
-/* position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%); */
-`
+// export const ImageLoader = styled(ThreeDots)`
+// /* position: absolute;
+// top: 50%;
+// left: 50%;
+// transform: translate(-50%); */
+// `
 
-export const LoaderContainer = styled.div`
-	width: 100%;
-	min-height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-`;
+// export const LoaderContainer = styled.div`
+// 	width: 100%;
+// 	min-height: 100%;
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// `;
