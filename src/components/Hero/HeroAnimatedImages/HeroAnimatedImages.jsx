@@ -3,8 +3,7 @@ import {
 	ImagesContainer,
 	StyledImage,
 	Container,
-	// ImageLoader,
-	// LoaderContainer,
+	LoaderContainer,
 } from "./HeroAnimatedImages.styled";
 import {
 	heroProperty1Mobile,
@@ -15,34 +14,30 @@ import {
 	heroProperty2Desktop,
 } from "@/assets/Pics/heroPics/pic2Hero/heroPic-2";
 import useWindowDimensions from "@/utils/hooks/useWindowDimensions";
-// import imagePreLoad from "@/utils/imagePreLoad";
-// import { ThreeDots } from "react-loader-spinner";
+import imagePreLoad from "@/utils/imagePreLoad";
+import { ThreeDots } from "react-loader-spinner";
 
 function HeroAnimatedImages() {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [images1, setImages1] = useState(null);
 	const [images2, setImages2] = useState(null);
-	// const [isLoading, setIsLoading] = useState(true)
+	const [isLoading, setIsLoading] = useState(true);
 	const dimensions = useWindowDimensions();
 
 	useEffect(() => {
-		// (async () => {
+		(async () => {
 			if (dimensions >= 744) {
-				// await imagePreLoad([...heroProperty1Desktop, ...heroProperty2Desktop]);
-				// await
-				setImages1(heroProperty1Desktop);
-				// await
-				setImages2(heroProperty2Desktop);
-				// setIsLoading(false);
+				await imagePreLoad([...heroProperty1Desktop, ...heroProperty2Desktop]);
+				await setImages1(heroProperty1Desktop);
+				await setImages2(heroProperty2Desktop);
+				setIsLoading(false);
 			} else {
-				// await imagePreLoad([...heroProperty1Mobile, ...heroProperty2Mobile]);
-				// await
-				setImages1(heroProperty1Mobile);
-				// await
-				setImages2(heroProperty2Mobile);
-				// setIsLoading(false);
+				await imagePreLoad([...heroProperty1Mobile, ...heroProperty2Mobile]);
+				await setImages1(heroProperty1Mobile);
+				await setImages2(heroProperty2Mobile);
+				setIsLoading(false);
 			}
-		// })();
+		})();
 	}, [dimensions]);
 
 	useEffect(() => {
@@ -62,8 +57,7 @@ function HeroAnimatedImages() {
 	return (
 		<ImagesContainer>
 			<Container>
-				{images1 &&
-					// !isLoading ? (
+				{images1 && !isLoading ? (
 					images1.map(({ lowRes, highRes }, index) => (
 						<StyledImage
 							key={index}
@@ -77,16 +71,14 @@ function HeroAnimatedImages() {
 							aria-hidden="true"
 						/>
 					))
-				// ) : (
-				// 	<LoaderContainer>
-				// 		<ImageLoader color="#ffffff" />
-				// 	</LoaderContainer>
-				// )
-				}
+				) : (
+					<LoaderContainer>
+						<ThreeDots color="#ffffff" />
+					</LoaderContainer>
+				)}
 			</Container>
 			<Container>
-				{images2 &&
-					// !isLoading ? (
+				{images2 && !isLoading ? (
 					images2.map(({ lowRes, highRes }, index) => (
 						<StyledImage
 							key={index}
@@ -100,12 +92,11 @@ function HeroAnimatedImages() {
 							aria-hidden="true"
 						/>
 					))
-				// ) : (
-				// 	<LoaderContainer>
-				// 		<ImageLoader color="#ffffff" />
-				// 	</LoaderContainer>
-				// )
-				}
+				) : (
+					<LoaderContainer>
+						<ThreeDots color="#ffffff" />
+					</LoaderContainer>
+				)}
 			</Container>
 		</ImagesContainer>
 	);
