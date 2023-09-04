@@ -13,7 +13,7 @@ import {
 	heroProperty2Desktop,
 } from "@/assets/Pics/heroPics/pic2Hero/heroPic-2";
 import useWindowDimensions from "@/utils/hooks/useWindowDimensions";
-// import imagePreLoad from "@/utils/imagePreLoad";
+import imagePreLoad from "@/utils/imagePreLoad";
 
 function HeroAnimatedImages() {
 	const [currentIndex, setCurrentIndex] = useState(0);
@@ -24,21 +24,21 @@ function HeroAnimatedImages() {
 
 
 	useEffect(() => {
-		// (async () => {
+		(async () => {
 			if (dimensions >= 744) {
-				// await
-				// imagePreLoad([...heroProperty1Desktop, ...heroProperty2Desktop]);
+				await
+				imagePreLoad([...heroProperty1Desktop, ...heroProperty2Desktop]);
 			setImages1(heroProperty1Desktop);
 			setImages2(heroProperty2Desktop);
 			// setWereImagesLoaded(true);
 		} else {
-				// await
-				// imagePreLoad([...heroProperty1Mobile, ...heroProperty2Mobile]);
+				await
+				imagePreLoad([...heroProperty1Mobile, ...heroProperty2Mobile]);
 			setImages1(heroProperty1Mobile);
 			setImages2(heroProperty2Mobile);
 			// setWereImagesLoaded(true);
 			}
-		// })()
+		})()
 	}, [dimensions]);
 
 	useEffect(() => {
