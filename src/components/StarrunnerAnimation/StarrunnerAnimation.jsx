@@ -4,6 +4,10 @@ import {
 	MainHeading,
 	Subheading,
 	RippleEllipse,
+	ArrowDownAnimationContainer,
+	ArrowDiv1,
+	ArrowDiv2,
+	ArrowDiv3,
 } from "./StarrunnerAnimation.styled";
 import { useState, useEffect, useRef } from "react";
 
@@ -21,6 +25,7 @@ function StarRunnerAnimation() {
 	useEffect(() => {
 		if (rippleAreaRef.current) {
 			setRippleAreaOffset(rippleAreaRef.current.offsetTop - window.innerHeight);
+			
 		}
 		window.addEventListener("scroll", checkScroll);
 		return () => {
@@ -29,18 +34,26 @@ function StarRunnerAnimation() {
 	}, []);
 
 	return (
-		<Section>
-			<Container ref={rippleAreaRef} $animationActive={animationActive}>
-				<Subheading>Explore Cyberpunk Space Adventures in</Subheading>
-				<MainHeading> StarRunner ecosystem</MainHeading>
-			</Container>
-			<RippleEllipse $animationActive={animationActive}></RippleEllipse>
-			<RippleEllipse $animationActive={animationActive}></RippleEllipse>
-			<RippleEllipse $animationActive={animationActive}></RippleEllipse>
-			<RippleEllipse $animationActive={animationActive}></RippleEllipse>
-			<RippleEllipse $animationActive={animationActive}></RippleEllipse>
-            <RippleEllipse $animationActive={animationActive}></RippleEllipse>
-            
+		<Section ref={rippleAreaRef}>
+			{animationActive && (
+				<>
+					<Container>
+						<Subheading>Explore Cyberpunk Space Adventures in</Subheading>
+						<MainHeading> StarRunner ecosystem</MainHeading>
+					</Container>
+					<RippleEllipse></RippleEllipse>
+					<RippleEllipse></RippleEllipse>
+					<RippleEllipse></RippleEllipse>
+					<RippleEllipse></RippleEllipse>
+					<RippleEllipse></RippleEllipse>
+					<RippleEllipse></RippleEllipse>
+					<ArrowDownAnimationContainer>
+						<ArrowDiv1></ArrowDiv1>
+						<ArrowDiv2></ArrowDiv2>
+						<ArrowDiv3></ArrowDiv3>
+					</ArrowDownAnimationContainer>
+				</>
+			)}
 		</Section>
 	);
 }

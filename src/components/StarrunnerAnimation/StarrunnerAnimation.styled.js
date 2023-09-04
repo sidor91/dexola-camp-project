@@ -1,4 +1,4 @@
-import styled, { keyframes, css } from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { H3heading, H2heading } from "@/components/SharedElements.styled";
 import background from "./StarRunnerBackground.png";
 
@@ -33,11 +33,7 @@ export const Container = styled.div`
 	gap: 20px;
 	border: 2px solid var(--color-accent-blue);
 	border-radius: 50%;
-	${props =>
-    props.$animationActive &&
-    css`
-      animation: ${textOpacityAnimation} 3000ms ease-in;
-    `}
+	animation: ${textOpacityAnimation} 3000ms ease-in;
 `;
 
 export const Subheading = styled(H3heading)`
@@ -54,7 +50,7 @@ export const MainHeading = styled(H2heading)`
 
 const rippleOpacityAnimation = keyframes`
 0%{opacity: 0}
-30%{opacity: 1}
+1%{opacity: 1}
 100%{opacity: 0}
 `;
 
@@ -86,70 +82,125 @@ const rippleAnimationVertical = keyframes`
 export const RippleEllipse = styled.div`
 	border-radius: 50%;
 	border: 6px solid var(--color-accent-blue);
+	box-shadow: inset 0 0 20px var(--color-accent-blue);
 	position: absolute;
-	${(props) =>
-		props.$animationActive &&
-		css`
-			animation: ${rippleOpacityAnimation} 6000ms forwards;
-		`}
 
 	&:nth-child(2) {
 		width: 40px;
 		height: 20px;
-		${(props) =>
-			props.$animationActive &&
-			css`
-				animation: ${rippleAnimation1} 6000ms forwards;
-			`}
+		animation: ${rippleAnimation1} 6000ms forwards,
+			${rippleOpacityAnimation} 6000ms forwards;
 	}
 
 	&:nth-child(3) {
 		width: 160px;
 		height: 80px;
-		${(props) =>
-			props.$animationActive &&
-			css`
-				animation: ${rippleAnimation2} 6000ms forwards;
-			`}
+		animation: ${rippleAnimation2} 6000ms forwards,
+			${rippleOpacityAnimation} 6000ms forwards;
 	}
 
 	&:nth-child(4) {
 		width: 320px;
 		height: 160px;
-		${(props) =>
-			props.$animationActive &&
-			css`
-				animation: ${rippleAnimation3} 6000ms forwards;
-			`}
+		animation: ${rippleAnimation3} 6000ms forwards,
+			${rippleOpacityAnimation} 6000ms forwards;
 	}
 
 	&:nth-child(5) {
 		width: 640px;
 		height: 320px;
-		${(props) =>
-			props.$animationActive &&
-			css`
-				animation: ${rippleAnimation4} 6000ms forwards;
-			`}
+		animation: ${rippleAnimation4} 6000ms forwards,
+			${rippleOpacityAnimation} 6000ms forwards;
 	}
 
 	&:nth-child(6) {
 		width: 1280px;
 		height: 640px;
-		${(props) =>
-			props.$animationActive &&
-			css`
-				animation: ${rippleAnimation5} 6000ms forwards;
-			`}
+		animation: ${rippleAnimation5} 6000ms forwards,
+			${rippleOpacityAnimation} 6000ms forwards;
 	}
 
 	&:nth-child(7) {
 		width: 10px;
 		height: 20px;
-		${(props) =>
-			props.$animationActive &&
-			css`
-				animation: ${rippleAnimationVertical} 7000ms forwards;
-			`}
+		animation: ${rippleAnimationVertical} 7000ms forwards,
+			${rippleOpacityAnimation} 6000ms forwards;
 	}
+`;
+
+const arrowContainerAnimation = keyframes`
+0% {
+    border-color: transparent;
+    opacity: 0;
+  }
+  100% {
+    border-color: var(--color-white);
+    opacity: 1;
+  }
+`;
+
+export const ArrowDownAnimationContainer = styled.div`
+	position: absolute;
+	bottom: 47px;
+	right: 76px;
+	border-radius: 50%;
+	border: 1px solid transparent;
+	animation: ${arrowContainerAnimation} 2s ease-in 2s forwards;
+
+	width: 88px;
+	height: 88px;
+`;
+
+
+
+
+const arrowAnimation1 = keyframes`
+0% {
+    opacity: 0.3; border-color: var(--color-white);
+  }
+50% { opacity: 1;} 
+  100% {
+    opacity: 0.3;
+  }
+`;
+
+const arrowAnimation2 = keyframes`
+0% {
+    opacity: 0; border-color: transparent;
+  }
+50% { opacity: 1; 	border-color: var(--color-white);}
+  100% {
+    opacity: 0;  border-color: transparent;
+  }
+`;
+
+
+
+export const ArrowDiv1 = styled.div`
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translateX(-50%) rotate(45deg);
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	opacity: 0;
+
+	animation: ${arrowAnimation1} 2000ms ease-in-out
+		2000ms infinite forwards;
+`;
+
+export const ArrowDiv2 = styled(ArrowDiv1)`
+	top: 40%;
+	animation-name: ${arrowAnimation2};
+	animation-delay: 2300ms;
+`;
+
+export const ArrowDiv3 = styled(ArrowDiv1)`
+	top: 50%;
+	animation-name: ${arrowAnimation2};
+	animation-delay: 2600ms;
 `;
