@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { media } from "@/utils/mediaRules";
+import { ThreeDots } from "react-loader-spinner";
 
 export const ImagesContainer = styled.div`
 	display: flex;
@@ -54,4 +55,19 @@ export const StyledImage = styled.img`
 	height: 100%;
 	object-fit: cover;
 	object-position: top;
+`;
+
+export const ImageLoader = styled(ThreeDots)`
+/* position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%); */
+`
+
+export const LoaderContainer = styled.div`
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 `;

@@ -9,10 +9,7 @@ function Fallback() {
 				width="80"
 				radius="9"
 				color="#ffffff"
-				ariaLabel="three-dots-loading"
-				wrapperStyle={{}}
-				wrapperClassName=""
-				visible={true}
+				ariaLabel="loading"
 			/>
 		</Container>
 	);

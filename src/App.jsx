@@ -31,23 +31,23 @@ function App() {
 	}, [dimensions]);
 
 	return (
-		<Suspense fallback={<Fallback/>}>
-			<Header />
-			<MainContainer>
-				<Hero />
-				{isStarRunnerShown && <StarRunner />}
-				<Section sectionName="Features" sectionNumber="01">
-					<Features />
-				</Section>
-				<Section sectionName="Top NFTs" sectionNumber="02">
-					<NFTTable />
-				</Section>
-				<Section sectionName="Join Us" sectionNumber="03">
-					<JoinUs />
-				</Section>
-				<Toast />
-			</MainContainer>
-			<Footer />
+		<Suspense fallback={<Fallback />}>
+					<Header />
+					<MainContainer>
+						<Hero/>
+						{isStarRunnerShown && <StarRunner />}
+						<Section sectionName="Features" sectionNumber="01">
+							<Features />
+						</Section>
+						<Section sectionName="Top NFTs" sectionNumber="02">
+							<NFTTable />
+						</Section>
+						<Section sectionName="Join Us" sectionNumber="03">
+							<JoinUs />
+						</Section>
+						<Toast />
+					</MainContainer>
+					<Footer />
 		</Suspense>
 	);
 }
