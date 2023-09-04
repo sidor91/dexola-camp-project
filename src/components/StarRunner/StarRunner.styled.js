@@ -33,7 +33,7 @@ export const Container = styled.div`
 	gap: 20px;
 	border: 2px solid var(--color-accent-blue);
 	border-radius: 50%;
-    opacity: 0;
+	opacity: 0;
 	animation: ${textOpacityAnimation} 3000ms ease-in 1000ms forwards;
 `;
 

@@ -15,7 +15,7 @@ const MainContainer = lazy(() =>
 	import("@/components/MainContainer/MainContainer")
 );
 const StarRunner = lazy(() =>
-	import("@/components/StarRunnerAnimation/StarRunnerAnimation")
+	import("@/components/StarRunner/StarRunner")
 );
 
 function App() {

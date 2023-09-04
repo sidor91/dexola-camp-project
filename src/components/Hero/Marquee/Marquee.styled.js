@@ -3,7 +3,6 @@ import { media } from "@/utils/mediaRules";
 
 export const MarqueeContainer = styled.div`
 	overflow: hidden;
-
 	@media ${media.minTablet} {
 		margin-bottom: 13px;
 	}

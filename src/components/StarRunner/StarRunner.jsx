@@ -8,7 +8,7 @@ import {
 	ArrowDiv1,
 	ArrowDiv2,
 	ArrowDiv3,
-} from './StarrunnerAnimation.styled';
+} from "./StarRunner.styled";
 import { useState, useEffect, useRef } from "react";
 
 function StarRunnerAnimation() {
