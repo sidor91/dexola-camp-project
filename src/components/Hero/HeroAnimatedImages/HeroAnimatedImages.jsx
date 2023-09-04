@@ -13,34 +13,33 @@ import {
 	heroProperty2Desktop,
 } from "@/assets/Pics/heroPics/pic2Hero/heroPic-2";
 import useWindowDimensions from "@/utils/hooks/useWindowDimensions";
-import useImagePreLoad from "@/utils/hooks/useImagePreLoad";
+import imagePreLoad from "@/utils/imagePreLoad";
 
 function HeroAnimatedImages() {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [images1, setImages1] = useState(heroProperty1Mobile);
 	const [images2, setImages2] = useState(heroProperty2Mobile);
+	const [wereImagesLoaded, setWereImagesLoaded] = useState(false)
 	const dimensions = useWindowDimensions();
-	const wereImagesLoaded = useImagePreLoad([
-		...heroProperty1Mobile,
-		...heroProperty2Mobile,
-		...heroProperty1Desktop,
-		...heroProperty2Desktop,
-	]);
 
 
 	useEffect(() => {
-		if (dimensions >= 744) {
+		(async ()=>{if (dimensions >= 744) {
+			await imagePreLoad([...heroProperty1Desktop, ...heroProperty2Desktop]);
 			setImages1(heroProperty1Desktop);
 			setImages2(heroProperty2Desktop);
+			setWereImagesLoaded(true);
 		} else {
+			await imagePreLoad([...heroProperty1Mobile, ...heroProperty2Mobile]);
 			setImages1(heroProperty1Mobile);
 			setImages2(heroProperty2Mobile);
-		}
+			setWereImagesLoaded(true);
+		}})()
 	}, [dimensions]);
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-			if (currentIndex === images1?.length - 1) {
+			if ( currentIndex === images1?.length - 1) {
 				setCurrentIndex(0);
 			} else {
 				setCurrentIndex(currentIndex + 1);
