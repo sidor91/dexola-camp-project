@@ -68,13 +68,14 @@ export const SubmitButton = styled.button`
 
 	font: var(--font-button-link-web-tablet);
 
+	&:hover {
+		background-color: var(--color-button-hover);
+	}
+
 	@media ${media.minTablet} {
 		width: 235px;
 		margin-right: auto;
 		padding-left: 89.2px;
-	}
-
-	@media ${media.minDesktop} {
 	}
 `;
 
@@ -140,8 +141,6 @@ export const ButtonText = styled.span`
 			left: -23.2px;
 		}
 
-		@media ${media.minDesktop} {
-		}
 	}
 `;
 

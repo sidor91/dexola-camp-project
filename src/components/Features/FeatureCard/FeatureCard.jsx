@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import {
 	Card,
 	ImageContainer,
@@ -10,9 +11,8 @@ import {
 	StyledIcon,
 } from "./FeatureCard.styled";
 import iconArrow from "@/assets/Pics/icon_arrow-up.svg";
-import PropTypes from "prop-types";
 
-function FeatureCard ({ image, number, title, description }) {
+function FeatureCard({ image, number, title, description }) {
 	return (
 		<Card>
 			<ImageContainer>

@@ -44,5 +44,5 @@ export default PasswordInput;
 
 PasswordInput.propTypes = {
 	children: PropTypes.element,
-	$iserror: PropTypes.bool,
+	$iserror: PropTypes.string,
 };

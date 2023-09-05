@@ -25,7 +25,6 @@ function Header() {
 				<StyledButtonLink
 					onClick={scrollToElement}
 					aria-label="join now"
-					href="#"
 				>
 					<ArrowUpIcon src={iconArrow} alt="arrow up" aria-hidden="true" />
 					<span>join now</span>
