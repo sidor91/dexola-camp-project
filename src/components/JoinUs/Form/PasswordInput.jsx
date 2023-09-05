@@ -7,27 +7,24 @@ import {
 	IconEyeContainer,
 } from "./Form.styled";
 import asterisk from "@/assets/Pics/asterisk.svg";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import "./phoneInput.css";
 import PropTypes from "prop-types";
 
-function PasswordInput ({children, $iserror, ...props}) {
-    const [isPasswordShown, setIsPasswordShown] = useState(false);
-    const passwordref = useRef(null);
+function PasswordInput({ children, $iserror, ...props }) {
+	const [isPasswordShown, setIsPasswordShown] = useState(false);
 
 	const togglePassword = () => {
 		setIsPasswordShown(!isPasswordShown);
-		if (isPasswordShown) {
-			passwordref.current.type = "password";
-		} else {
-			passwordref.current.type = "text";
-		}
 	};
 
 	return (
 		<InputContainer $iserror={$iserror}>
 			<IconAsterisk src={asterisk} alt="asterisk" aria-hidden="true" />
-			<Input {...props} type="password" ref={passwordref} />
+			<Input
+				{...props}
+				type={isPasswordShown ? "text" : "password"}
+			/>
 			<IconEyeContainer onClick={togglePassword}>
 				{isPasswordShown ? (
 					<IconEye aria-label="password shown" />

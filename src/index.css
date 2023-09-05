@@ -66,7 +66,7 @@
 	--color-light-grey: #b3b3b3;
 	--color-background: #060412;
 	--color-warning-rose: #eb3795;
-	--color-button: #272a2e;
+	--color-button: rgb(39, 42, 46);
 	--color-button-hover: rgba(39, 42, 46, 0.90);
 
 	--width-mobile: 375px;

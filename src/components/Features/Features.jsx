@@ -9,7 +9,7 @@ import FeaturesCardSet from "@/components/Features/FeaturesCardSet/FeaturesCardS
 
 function Features () {
 	return (
-		<Container>
+		<Container id='features'>
 			<InformationContainer>
 				<Heading>About StarRunner</Heading>
 				<StyledParagraph>

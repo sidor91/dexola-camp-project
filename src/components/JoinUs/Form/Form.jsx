@@ -14,12 +14,12 @@ import PasswordInput from "./PasswordInput";
 import * as Yup from "yup";
 import { toast } from "react-toastify";
 
-function Form () {
-
+function Form() {
 	const onSubmit = ({ email, phoneNumber, password, confirmPassword }) => {
 		toast(
 			`email: ${email}, phoneNumber: ${phoneNumber}, password: ${password}, confirmPassword: ${confirmPassword}`
 		);
+		formik.handleReset();
 	};
 
 	const validationSchema = Yup.object({
@@ -68,7 +68,7 @@ function Form () {
 	return (
 		<StyledForm onSubmit={formik.handleSubmit} id="joinus">
 			<InputContainer $iserror={touchedEmail && errorsEmail}>
-				<IconAsterisk src={asterisk} alt="asterisk" aria-hidden="true"/>
+				<IconAsterisk src={asterisk} alt="asterisk" aria-hidden="true" />
 				<Input
 					id="email"
 					name="email"
@@ -139,6 +139,5 @@ function Form () {
 		</StyledForm>
 	);
 }
-
 
 export default Form;

@@ -21,13 +21,13 @@ function HeroAnimatedImages() {
 	const dimensions = useWindowDimensions();
 
 	useEffect(() => {
-			if (dimensions >= 744) {
-				setImages1(heroProperty1Desktop);
-				setImages2(heroProperty2Desktop);
-			} else {
-				setImages1(heroProperty1Mobile);
-				setImages2(heroProperty2Mobile);
-			}
+		if (dimensions >= 744) {
+			setImages1(heroProperty1Desktop);
+			setImages2(heroProperty2Desktop);
+		} else {
+			setImages1(heroProperty1Mobile);
+			setImages2(heroProperty2Mobile);
+		}
 	}, [dimensions]);
 
 	useEffect(() => {
@@ -60,8 +60,7 @@ function HeroAnimatedImages() {
 							}}
 							aria-hidden="true"
 						/>
-					))
-				}
+					))}
 			</Container>
 			<Container>
 				{images2 &&
@@ -77,8 +76,7 @@ function HeroAnimatedImages() {
 							}}
 							aria-hidden="true"
 						/>
-					))
-				}
+					))}
 			</Container>
 		</ImagesContainer>
 	);

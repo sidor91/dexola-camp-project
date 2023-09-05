@@ -14,20 +14,16 @@ const Toast = lazy(() => import("@/components/ToastContainer"));
 const MainContainer = lazy(() =>
 	import("@/components/MainContainer/MainContainer")
 );
-const StarRunner = lazy(() =>
-	import("@/components/StarRunner/StarRunner")
-);
+const StarRunner = lazy(() => import("@/components/StarRunner/StarRunner"));
 
 function App() {
 	const dimensions = useWindowDimensions();
-	const [isStarRunnerShown, setIsStarRunnerShown] = useState(false);
+	const [isStarRunnerShown, setIsStarRunnerShown] = useState(
+		dimensions >= 1440
+	);
 
 	useEffect(() => {
-		if (dimensions >= 1440) {
-			setIsStarRunnerShown(true);
-		} else {
-			setIsStarRunnerShown(false);
-		}
+		setIsStarRunnerShown(dimensions >= 1440);
 	}, [dimensions]);
 
 	return (

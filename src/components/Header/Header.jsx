@@ -7,23 +7,15 @@ import {
 } from "./Header.styled";
 import Logo from "@/assets/Pics/Logo.svg";
 import iconArrow from "@/assets/Pics/icon_arrow-up.svg";
+import scrollToElement from "@/utils/smoothScroll";
 
 function Header() {
-	const scrollToElement = () => {
-		const element = document.getElementById("joinus");
-		if (element) {
-			element.scrollIntoView({
-				behavior: "smooth",
-			});
-		}
-	};
-
 	return (
 		<StyledHeader>
 			<Container>
 				<LogoIcon src={Logo} alt="Logo" aria-label="Logo DX" />
 				<StyledButtonLink
-					onClick={scrollToElement}
+					onClick={()=>{scrollToElement("joinus")}}
 					aria-label="join now"
 				>
 					<ArrowUpIcon src={iconArrow} alt="arrow up" aria-hidden="true" />

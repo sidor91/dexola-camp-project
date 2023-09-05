@@ -10,16 +10,12 @@ import { useState, useEffect } from "react";
 import Form from "@/components/JoinUs/Form/Form";
 import iconArrowRight from "@/assets/Pics/icon_arrow-right.svg";
 
-function JoinUs () {
-    const [isDesktop, setIsDesktop] = useState(false);
-    const dimensions = useWindowDimensions();
-
+function JoinUs() {
+	const dimensions = useWindowDimensions();
+    const [isDesktop, setIsDesktop] = useState(dimensions >= 1440);
+    
     useEffect(() => {
-        if (dimensions >= 1440) {
-            setIsDesktop(true)
-        } else {
-            setIsDesktop(false)
-        }
+        setIsDesktop(dimensions >= 1440);
     },[dimensions])
     
 	return (
